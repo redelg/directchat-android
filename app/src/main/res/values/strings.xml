@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">DirectChat</string>
+    <string name="text_home">Home</string>
+    <string name="text_chat">Chat</string>
+    <string name="text_history">History</string>
+
+
+    <!--  ADS  -->
+<!--    <string name="ads_app_id" translatable="false">ca-app-pub-7110624018386566~4305730496</string>-->
+<!--    <string name="banner_chat" translatable="false">ca-app-pub-7110624018386566/9936496975</string>-->
+
+
+    <!--  TEST ADS  -->
+    <string name="ads_app_id" translatable="false">ca-app-pub-3940256099942544~3347511713</string>
+    <string name="banner_chat" translatable="false">ca-app-pub-3940256099942544/6300978111</string>
+
+</resources>
