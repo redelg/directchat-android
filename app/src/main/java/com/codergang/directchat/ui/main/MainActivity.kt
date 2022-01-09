@@ -6,6 +6,9 @@ import androidx.fragment.app.Fragment
 import com.codergang.directchat.R
 import com.codergang.directchat.databinding.ActivityMainBinding
 import com.codergang.directchat.ui.chat.ChatFragment
+import com.codergang.directchat.ui.history.HistoryFragment
+import com.codergang.directchat.ui.link.LinkFragment
+import com.google.android.material.tabs.TabLayoutMediator
 
 class MainActivity : AppCompatActivity() {
 
@@ -23,16 +26,28 @@ class MainActivity : AppCompatActivity() {
     private fun setup(){
         adapter.setItems(listOf(
             ChatFragment(),
-            ChatFragment()
+            HistoryFragment(),
+            LinkFragment()
         ))
         binding.viewPager.adapter = adapter
         binding.viewPager.offscreenPageLimit = 2
-        binding.bottomNav.setOnItemSelectedListener {
-            when(it.itemId){
-                R.id.menu_chat -> binding.viewPager.setCurrentItem(0, true)
-                R.id.menu_history -> binding.viewPager.setCurrentItem(1, true)
+        setTabLayout()
+//        binding.bottomNav.setOnItemSelectedListener {
+//            when(it.itemId){
+//                R.id.menu_chat -> binding.viewPager.setCurrentItem(0, true)
+//                R.id.menu_history -> binding.viewPager.setCurrentItem(1, true)
+//            }
+//            true
+//        }
+    }
+
+    private fun setTabLayout(){
+        TabLayoutMediator(binding.tabLayout, binding.viewPager) { tab, pos ->
+            when(pos){
+                0 -> tab.setIcon(R.drawable.ic_baseline_chat_24)
+                1 -> tab.setIcon(R.drawable.ic_baseline_contacts_24)
+                2 -> tab.setIcon(R.drawable.ic_baseline_qr_code_24)
             }
-            true
-        }
+        }.attach()
     }
 }

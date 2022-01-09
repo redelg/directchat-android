@@ -2,27 +2,25 @@ package com.codergang.directchat.ui.chat
 
 import android.content.Intent
 import android.net.Uri
-import androidx.lifecycle.ViewModelProvider
 import android.os.Bundle
-import android.telephony.PhoneNumberFormattingTextWatcher
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.codergang.directchat.R
+import androidx.fragment.app.Fragment
+import androidx.fragment.app.viewModels
+import com.codergang.directchat.data.entity.ChatDB
 import com.codergang.directchat.databinding.ChatFragmentBinding
+import com.codergang.directchat.ui.util.PhoneTextWatcher
 import com.codergang.directchat.ui.util.setSafeOnClickListener
 import com.codergang.directchat.ui.util.showSnackBar
-import java.lang.Exception
-import java.net.URLEncoder
-import android.text.Editable
-import android.text.TextWatcher
-import androidx.core.widget.doAfterTextChanged
+import com.google.android.gms.ads.AdRequest
+import java.util.*
 
 
 class ChatFragment : Fragment() {
 
     private lateinit var binding: ChatFragmentBinding
+    private val viewModel: ChatViewModel by viewModels()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -35,51 +33,46 @@ class ChatFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         setup()
+        loadAd()
     }
 
-    private fun setup(){
-        binding.etCarrierNumber.addTextChangedListener(object : TextWatcher {
-            var length_before = 0
+    private fun loadAd() {
+        val adRequest: AdRequest = AdRequest.Builder().build()
+        binding.banner.loadAd(adRequest)
+    }
 
-            override fun beforeTextChanged(s: CharSequence, p1: Int, p2: Int, p3: Int) {
-                length_before = s.length
-            }
-
-            override fun onTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
-            }
-
-            override fun afterTextChanged(s: Editable) {
-                if (length_before < s.length) {
-                    if (s.length == 3 || s.length == 7)
-                        s.append("-");
-                    if (s.length > 3) {
-                        if (Character.isDigit(s[3]))
-                            s.insert(3, "-");
-                    }
-                    if (s.length > 7) {
-                        if (Character.isDigit(s[7]))
-                            s.insert(7, "-");
-                    }
-                }
-            }
-
-        })
+    private fun setup() {
+        binding.etCarrierNumber.addTextChangedListener(PhoneTextWatcher())
         binding.btnChat.setSafeOnClickListener {
             val number = binding.etCarrierNumber.text.toString().trim()
-            if(number.isNotEmpty()){
-                openWhatsApap("${binding.ccp.selectedCountryCode}${number.replace("-", "")}")
+            if (number.isNotEmpty()) {
+                openWhatsApp("${binding.ccp.selectedCountryCode}${number.replace("-", "")}")
+                viewModel.saveChat(
+                    ChatDB(
+                        Date().time,
+                        number
+                    )
+                )
             }
         }
     }
 
-    private fun openWhatsApap(numero: String) {
-        val sendIntent = Intent(Intent.ACTION_SENDTO, Uri.parse("smsto:$numero"))
-        sendIntent.setPackage("com.whatsapp")
-        if (requireActivity().intent.resolveActivity(requireActivity().packageManager) == null) {
+    private fun openWhatsApp(numero: String) {
+        try {
+            val intent = Intent(Intent.ACTION_VIEW)
+            intent.data = Uri.parse("https://wa.me/$numero/?text=")
+            startActivity(intent)
+        } catch (e: Exception) {
             showSnackBar(binding.root, "Para continuar, instale Whatsapp")
-            return
         }
-        startActivity(sendIntent)
+//        return
+//        val sendIntent = Intent(Intent.ACTION_SENDTO, Uri.parse("smsto:$numero"))
+//        sendIntent.setPackage("com.whatsapp")
+//        if (requireActivity().intent.resolveActivity(requireActivity().packageManager) == null) {
+//            showSnackBar(binding.root, "Para continuar, instale Whatsapp")
+//            return
+//        }
+//        startActivity(sendIntent)
     }
 
 
