@@ -22,6 +22,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.DirectChat">
         <activity
+            android:name=".ui.settings.SettingsActivity"
+            android:exported="false" />
+        <activity
             android:name=".ui.qr.CreateCodeActivity"
             android:exported="false" />
         <activity
@@ -43,7 +46,6 @@
                 android:name="android.support.FILE_PROVIDER_PATHS"
                 android:resource="@xml/filepaths" />
         </provider> <!-- Sample AdMob app ID: ca-app-pub-3940256099942544~3347511713 -->
-
         <meta-data
             android:name="com.google.android.gms.ads.APPLICATION_ID"
             android:value="@string/ads_app_id" />

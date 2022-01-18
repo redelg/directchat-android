@@ -1,11 +1,15 @@
 package com.codergang.directchat.ui.util
 
+import android.app.Activity
+import android.content.Context
 import android.os.SystemClock
 import android.text.Editable
 import android.text.TextWatcher
 import android.view.KeyEvent
 import android.view.View
+import android.view.inputmethod.InputMethodManager
 import android.widget.EditText
+import androidx.fragment.app.Fragment
 import com.google.android.material.snackbar.Snackbar
 import java.text.SimpleDateFormat
 import java.util.*
@@ -34,6 +38,20 @@ fun EditText.onChange(onChange: (text: Editable?) -> Unit) {
         }
         false
     }
+}
+
+fun Activity.hideKeyboard() {
+    // Check if no view has focus:
+    val view: View = this.currentFocus ?: return
+    val inputManager: InputMethodManager = getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
+    inputManager.hideSoftInputFromWindow(view.windowToken, InputMethodManager.HIDE_NOT_ALWAYS)
+}
+
+fun Fragment.hideKeyboard() {
+    // Check if no view has focus:
+    val view: View = requireActivity().currentFocus ?: return
+    val inputManager: InputMethodManager = requireActivity().getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
+    inputManager.hideSoftInputFromWindow(view.windowToken, InputMethodManager.HIDE_NOT_ALWAYS)
 }
 
 fun showSnackBar(root: View, text: String){
