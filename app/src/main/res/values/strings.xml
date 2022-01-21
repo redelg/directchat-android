@@ -20,4 +20,8 @@
 
     <string name="string_share_image">Share Image</string>
     <string name="text_chat_disclaimer">Type the number and start a direct WhatsApp chat without saving or adding it as a contact.</string>
+    <string name="text_enter_your_message">Enter your message</string>
+    <string name="text_generate_qr">Generate QR</string>
+    <string name="text_share_link">Share Link</string>
+    <string name="text_enter_phone_number">Enter a phone number</string>
 </resources>

@@ -19,7 +19,7 @@ interface ChatDAO {
     @Query("DELETE FROM ChatDB")
     suspend fun deleteAll()
 
-    @Query("SELECT * FROM CHATDB")
+    @Query("SELECT * FROM CHATDB LIMIT 70")
     fun observeAll(): LiveData<List<ChatDB>>
 
 }

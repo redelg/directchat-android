@@ -2,6 +2,9 @@ package com.codergang.directchat.ui.qr
 
 import android.content.Intent
 import android.graphics.Bitmap
+import android.graphics.BitmapFactory
+import android.graphics.Rect
+import android.graphics.RectF
 import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -12,6 +15,8 @@ import com.codergang.directchat.ui.util.setSafeOnClickListener
 import com.github.sumimakito.awesomeqr.AwesomeQrRenderer
 import com.github.sumimakito.awesomeqr.option.RenderOption
 import com.github.sumimakito.awesomeqr.option.color.Color
+import com.github.sumimakito.awesomeqr.option.logo.Logo
+import com.google.android.gms.ads.AdRequest
 import java.io.File
 import java.io.FileOutputStream
 import java.io.IOException
@@ -30,13 +35,20 @@ class CreateCodeActivity : AppCompatActivity() {
 
         generateQr()
         setup()
+        loadAd()
     }
 
     private fun setup(){
+        setSupportActionBar(binding.toolbar)
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
         binding.btnShare.setSafeOnClickListener {
             bitmap?.let {
                 shareImage(it)
             }
+        }
+        binding.btnNew.setSafeOnClickListener {
+            setResult(RESULT_OK)
+            finish()
         }
     }
 
@@ -46,9 +58,18 @@ class CreateCodeActivity : AppCompatActivity() {
         renderOption.size = 800 // size of the final QR code image
         renderOption.borderWidth = 20 // width of the empty space around the QR code
         renderOption.patternScale = 0.4f // (optional) specify a scale for patterns
+        renderOption.color.dark = 0xFF000000.toInt()
+        renderOption.color.background = 0x55000000.toInt()
         renderOption.roundedPatterns = false // (optional) if true, blocks will be drawn as dots instead
         renderOption.clearBorder = false // if set to true, the background will NOT be drawn on the border area
-
+        renderOption.logo = Logo(
+            BitmapFactory.decodeResource(resources,
+                R.drawable.qr_center),
+            0.12f,
+            10,
+            10,
+            RectF(0f, 0f, 200f, 200f)
+        )
         AwesomeQrRenderer.renderAsync(renderOption, { result ->
             if (result.bitmap != null) {
                 this.bitmap = result.bitmap
@@ -88,6 +109,11 @@ class CreateCodeActivity : AppCompatActivity() {
             shareIntent.putExtra(Intent.EXTRA_STREAM, contentUri)
             startActivity(Intent.createChooser(shareIntent, getString(R.string.string_share_image)))
         }
+    }
+
+    private fun loadAd() {
+        val adRequest: AdRequest = AdRequest.Builder().build()
+        binding.banner.loadAd(adRequest)
     }
 
 }

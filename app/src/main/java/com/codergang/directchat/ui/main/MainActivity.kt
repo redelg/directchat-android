@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import com.codergang.directchat.R
+import com.codergang.directchat.data.entity.ChatDB
 import com.codergang.directchat.databinding.ActivityMainBinding
 import com.codergang.directchat.ui.chat.ChatFragment
 import com.codergang.directchat.ui.history.HistoryFragment
@@ -27,10 +28,11 @@ class MainActivity : AppCompatActivity() {
         adapter.setItems(listOf(
             ChatFragment(),
             HistoryFragment(),
-            LinkFragment()
+            LinkFragment(),
+            Fragment()
         ))
         binding.viewPager.adapter = adapter
-        binding.viewPager.offscreenPageLimit = 2
+        binding.viewPager.offscreenPageLimit = 4
         setTabLayout()
 //        binding.bottomNav.setOnItemSelectedListener {
 //            when(it.itemId){
@@ -44,10 +46,17 @@ class MainActivity : AppCompatActivity() {
     private fun setTabLayout(){
         TabLayoutMediator(binding.tabLayout, binding.viewPager) { tab, pos ->
             when(pos){
-                0 -> tab.setIcon(R.drawable.ic_baseline_chat_24)
-                1 -> tab.setIcon(R.drawable.ic_baseline_contacts_24)
+                0 -> tab.setIcon(R.drawable.ic_phone)
+                1 -> tab.setIcon(R.drawable.ic_history)
                 2 -> tab.setIcon(R.drawable.ic_baseline_qr_code_24)
+                3 -> tab.setIcon(R.drawable.ic_cog)
             }
         }.attach()
     }
+
+    fun setHistoryNumber(item: ChatDB) {
+        binding.viewPager.setCurrentItem(0, true)
+        adapter.setNumber(item)
+    }
+
 }

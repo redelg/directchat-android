@@ -9,8 +9,12 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import com.codergang.directchat.databinding.LinkFragmentBinding
 import android.content.Intent
+import android.widget.Toast
+import com.codergang.directchat.R
 import com.codergang.directchat.ui.qr.CreateCodeActivity
+import com.codergang.directchat.ui.util.PhoneTextWatcher
 import com.codergang.directchat.ui.util.setSafeOnClickListener
+import com.google.android.gms.ads.AdRequest
 
 
 class LinkFragment : Fragment() {
@@ -29,9 +33,11 @@ class LinkFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         setup()
+        loadAd()
     }
 
     private fun setup(){
+        binding.etCarrierNumber.addTextChangedListener(PhoneTextWatcher())
         binding.btnLink.setSafeOnClickListener {
             shareLink()
         }
@@ -60,8 +66,14 @@ class LinkFragment : Fragment() {
         }
     }
 
+    private fun loadAd() {
+        val adRequest: AdRequest = AdRequest.Builder().build()
+        binding.banner.loadAd(adRequest)
+    }
+
     private fun validate(): Boolean{
         if(binding.etCarrierNumber.text.toString().isEmpty()){
+            Toast.makeText(requireContext(), getString(R.string.text_enter_phone_number) , Toast.LENGTH_LONG).show()
            return false
         }
         return true

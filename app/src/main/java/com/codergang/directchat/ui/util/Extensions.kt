@@ -11,6 +11,7 @@ import android.view.inputmethod.InputMethodManager
 import android.widget.EditText
 import androidx.fragment.app.Fragment
 import com.google.android.material.snackbar.Snackbar
+import java.text.DateFormat
 import java.text.SimpleDateFormat
 import java.util.*
 
@@ -80,6 +81,6 @@ fun View.setSafeOnClickListener(onSafeClick: (View) -> Unit) {
 }
 
 private val format = "MMM dd yyyy"
-var sdf: SimpleDateFormat = SimpleDateFormat(format, Locale("ms", "MY", "MY"))
+var sdf: DateFormat = DateFormat.getDateTimeInstance(DateFormat.DEFAULT, DateFormat.SHORT, Locale.getDefault())
 
 fun Date.localizedString() = sdf.format(this)

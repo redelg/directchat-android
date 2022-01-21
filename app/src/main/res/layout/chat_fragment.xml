@@ -1,107 +1,115 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
+    android:isScrollContainer="false"
+    android:fitsSystemWindows="true"
+    android:fillViewport="true"
     tools:context=".ui.chat.ChatFragment">
 
-    <TextView
-        android:id="@+id/disclaimer"
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:fontFamily="@font/avenir"
-        android:textColor="@color/text"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="8dp"
-        android:text="@string/text_chat_disclaimer"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_height="match_parent">
 
-    <LinearLayout
-        android:id="@+id/linearLayout"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="8dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/disclaimer">
-
-        <com.hbb20.CountryCodePicker
-            android:id="@+id/ccp"
-            android:layout_width="wrap_content"
-            android:layout_height="45dp"
-            android:layout_marginEnd="4dp"
-            android:background="@drawable/border_shape"
-            android:paddingTop="2dp"
-            app:ccp_autoDetectCountry="true"
-            app:ccp_autoDetectLanguage="true"
-            app:ccp_rememberLastSelection="true" />
-
-        <com.google.android.material.textfield.TextInputLayout
-            style="@style/TextInput"
+        <TextView
+            android:id="@+id/disclaimer"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="4dp"
-            android:background="@drawable/border_shape"
-            android:hint="@string/default_number"
-            app:hintEnabled="false">
+            android:gravity="center"
+            android:fontFamily="@font/avenir"
+            android:textColor="@color/text"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="8dp"
+            android:text="@string/text_chat_disclaimer"
+            app:layout_constraintTop_toTopOf="parent" />
 
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/et_carrier_number"
-                android:layout_width="match_parent"
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/disclaimer">
+
+            <com.hbb20.CountryCodePicker
+                android:id="@+id/ccp"
+                android:layout_width="wrap_content"
                 android:layout_height="45dp"
-                android:gravity="center"
-                android:fontFamily="@font/avenir"
+                android:layout_marginEnd="4dp"
+                android:background="@drawable/border_shape"
+                android:paddingTop="2dp"
+                app:ccp_autoDetectCountry="true"
+                app:ccp_autoDetectLanguage="true"
+                app:ccp_rememberLastSelection="true" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/TextInput"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:background="@drawable/border_shape"
                 android:hint="@string/default_number"
-                android:inputType="phone"
-                android:maxLength="16"
-                android:padding="0dp"
-                android:singleLine="true" />
+                app:hintEnabled="false">
 
-        </com.google.android.material.textfield.TextInputLayout>
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_carrier_number"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:gravity="center"
+                    android:fontFamily="@font/avenir"
+                    android:hint="@string/default_number"
+                    android:inputType="phone"
+                    android:maxLength="16"
+                    android:padding="0dp"
+                    android:singleLine="true" />
 
-    </LinearLayout>
+            </com.google.android.material.textfield.TextInputLayout>
 
-    <include
-        android:id="@+id/phone"
-        layout="@layout/layout_phone_input"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+        </LinearLayout>
 
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/btn_chat"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:insetTop="0dp"
-        android:insetBottom="0dp"
-        android:letterSpacing=".05"
-        android:fontFamily="@font/avenir_demi"
-        android:text="@string/text_chat"
-        android:textAllCaps="false"
-        android:textSize="16sp"
-        app:layout_constraintBottom_toTopOf="@+id/banner"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/phone" />
+        <include
+            android:id="@+id/phone"
+            layout="@layout/layout_phone_input"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
 
-    <com.google.android.gms.ads.AdView
-        android:id="@+id/banner"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:adSize="SMART_BANNER"
-        app:adUnitId="@string/banner_chat"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_chat"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:insetTop="0dp"
+            android:insetBottom="0dp"
+            android:letterSpacing=".05"
+            android:fontFamily="@font/avenir_demi"
+            android:text="@string/text_chat"
+            android:textAllCaps="false"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toTopOf="@+id/banner"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/phone" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <com.google.android.gms.ads.AdView
+            android:id="@+id/banner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:adSize="BANNER"
+            app:adUnitId="@string/banner_chat"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>

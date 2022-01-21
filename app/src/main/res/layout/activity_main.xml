@@ -5,13 +5,19 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical">
 
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:background="@color/primary_light"/>
+
     <com.google.android.material.tabs.TabLayout
         android:id="@+id/tab_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/primary_light"
-        app:tabIconTint="@color/white"
-        app:tabIndicatorColor="@color/white"
+        app:tabIconTint="@color/tab_colors"
+        app:tabIndicatorColor="#46F696"
+        app:tabIndicatorHeight="4dp"
         app:tabInlineLabel="true" />
 
     <androidx.viewpager2.widget.ViewPager2

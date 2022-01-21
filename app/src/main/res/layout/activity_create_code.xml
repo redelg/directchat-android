@@ -1,36 +1,104 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".ui.qr.CreateCodeActivity">
 
-    <ProgressBar
-        android:id="@+id/progress"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:indeterminate="true"/>
+   <com.google.android.material.appbar.MaterialToolbar
+       android:id="@+id/toolbar"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       app:title="QR"
+       app:titleTextColor="@color/white"
+       app:navigationIconTint="@color/white"
+       android:background="@color/primary_light"/>
 
-    <ImageView
-        android:id="@+id/qr"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"/>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/btn_share"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:insetTop="0dp"
-        android:insetBottom="0dp"
-        android:letterSpacing=".05"
-        android:layout_gravity="bottom|center_horizontal"
-        android:text="Share QR"
-        android:textAllCaps="false"
-        android:textSize="16sp"
-        android:textStyle="bold"/>
+        <FrameLayout
+            android:id="@+id/frameLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
 
-</FrameLayout>
+            <ProgressBar
+                android:id="@+id/progress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:indeterminate="true" />
+
+            <ImageView
+                android:id="@+id/qr"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center" />
+
+        </FrameLayout>
+
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/buttons"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginTop="20dp"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toTopOf="@+id/banner"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/frameLayout">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_share"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:insetTop="0dp"
+                android:insetBottom="0dp"
+                android:letterSpacing=".05"
+                android:text="Share QR"
+                android:textAllCaps="false"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:icon="@drawable/ic_share_history"
+                app:iconPadding="10dp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_new"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:insetTop="0dp"
+                android:insetBottom="0dp"
+                app:backgroundTint="#008580"
+                android:letterSpacing=".05"
+                android:text="Create new"
+                android:textAllCaps="false"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:icon="@drawable/ic_baseline_add_24"
+                app:iconPadding="10dp" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <com.google.android.gms.ads.AdView
+            android:id="@+id/banner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:adSize="BANNER"
+            app:adUnitId="@string/banner_chat"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.appcompat.widget.LinearLayoutCompat>

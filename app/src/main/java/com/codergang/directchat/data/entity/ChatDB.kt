@@ -7,6 +7,8 @@ import androidx.room.PrimaryKey
 data class ChatDB (
     val timestamp: Long,
     val number: String,
+    val formattedNumber: String,
+    val numberWithoutCode: String,
     @PrimaryKey(autoGenerate = true) val id: Int = 0
 ){
     override fun equals(other: Any?): Boolean {
