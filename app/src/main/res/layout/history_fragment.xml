@@ -71,7 +71,7 @@
             android:layout_marginTop="8dp"
             android:fontFamily="@font/avenir"
             android:textSize="16sp"
-            android:text="No history"/>
+            android:text="@string/text_no_history"/>
 
     </androidx.appcompat.widget.LinearLayoutCompat>
 
@@ -81,7 +81,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|center_horizontal"
         app:adSize="BANNER"
-        app:adUnitId="@string/banner_chat"
+        app:adUnitId="@string/banner_history"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />

@@ -22,21 +22,26 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.DirectChat">
         <activity
-            android:name=".ui.settings.SettingsActivity"
+            android:name=".ui.presentation.PresentationActivity"
             android:exported="false" />
         <activity
-            android:name=".ui.qr.CreateCodeActivity"
-            android:exported="false" />
-        <activity
-            android:name=".ui.main.MainActivity"
-            android:windowSoftInputMode="adjustPan"
-            android:exported="true">
+            android:name=".ui.start.StartActivity"
+            android:exported="true"
+            android:theme="@style/Theme.CustomSplashScreenTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".ui.qr.CreateCodeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.main.MainActivity"
+            android:exported="false"
+            android:theme="@style/Theme.DirectChat"
+            android:windowSoftInputMode="adjustPan" />
 
         <provider
             android:name="androidx.core.content.FileProvider"

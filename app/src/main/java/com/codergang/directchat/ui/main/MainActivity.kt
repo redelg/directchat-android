@@ -9,6 +9,7 @@ import com.codergang.directchat.databinding.ActivityMainBinding
 import com.codergang.directchat.ui.chat.ChatFragment
 import com.codergang.directchat.ui.history.HistoryFragment
 import com.codergang.directchat.ui.link.LinkFragment
+import com.codergang.directchat.ui.settings.SettingsFragment
 import com.google.android.material.tabs.TabLayoutMediator
 
 class MainActivity : AppCompatActivity() {
@@ -29,7 +30,7 @@ class MainActivity : AppCompatActivity() {
             ChatFragment(),
             HistoryFragment(),
             LinkFragment(),
-            Fragment()
+            SettingsFragment()
         ))
         binding.viewPager.adapter = adapter
         binding.viewPager.offscreenPageLimit = 4

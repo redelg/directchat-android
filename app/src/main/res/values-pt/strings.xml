@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">DirectChat</string>
+    <string name="text_home">Início</string>
+    <string name="text_chat">Iniciar Chat</string>
+    <string name="text_history">Histórico</string>
+
+    <string name="string_share_image">Compartilhar Imagem</string>
+    <string name="text_chat_disclaimer">Digite o número e inicie um chat direto do WhatsApp sem salvá-lo ou adicioná-lo como um contato.</string>
+    <string name="text_enter_your_message">Digite sua mensagem</string>
+    <string name="text_generate_qr">Generate QR</string>
+    <string name="text_share_link">Compartilhar Link</string>
+    <string name="text_enter_phone_number">Digite o número de telefone</string>
+    <string name="text_leave_a_review">Leave us a Review</string>
+    <string name="tex_support_us">Deixe-nos uma revisão</string>
+    <string name="text_share_the_app">Compartilhe o App</string>
+    <string name="text_other_apps">Nossas aplicações</string>
+    <string name="text_about">Sobre a empresa</string>
+    <string name="text_privacy_policy">Política de Privacidade</string>
+    <string name="text_terms_and_conditions">Termos e Condições</string>
+    <string name="text_version">Versão</string>
+
+    <string name="text_download_app">Envie mensagens sem salvar os números da WhatsApp!</string>
+    <string name="text_create_new_qr">Criar novo QR</string>
+    <string name="text_share_qr">Compartilhe QR</string>
+    <string name="text_no_history">Sem histórico</string>
+    <string name="text_without_saving_contact">Se salvar\nContato</string>
+    <string name="text_no_need_to_save">Não é preciso salvar o contato, basta digitar o número e começar a conversar, é fácil!</string>
+    <string name="text_direct_chat">Chat Direto</string>
+    <string name="text_send_messages_and_media">Envie mensagens e mídia diretamente para qualquer número sem salvar o contato.</string>
+    <string name="text_quick_and_neasy_to_use">Rápido e fácil \nde usar</string>
+    <string name="text_start_sending_messages_in_an_easy_and_simple_way">Comece a enviar mensagens de uma maneira fácil e simples.</string>
+    <string name="text_skip">Saltar</string>
+
+</resources>

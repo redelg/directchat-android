@@ -3,25 +3,52 @@
     <string name="text_home">Home</string>
     <string name="text_chat">Start Chat</string>
     <string name="text_history">History</string>
-    <string name="database_name">ChatDatabase</string>
+    <string name="database_name" translatable="false">ChatDatabase</string>
 
-    <!--  ADS  -->
-    <!--    <string name="ads_app_id" translatable="false">ca-app-pub-7110624018386566~4305730496</string>-->
-    <!--    <string name="banner_chat" translatable="false">ca-app-pub-7110624018386566/9936496975</string>-->
-    <!--    <string name="banner_history" translatable="false">ca-app-pub-7110624018386566/6520189663</string>-->
-    <!--    <string name="ad_open_app" translatable="false">ca-app-pub-7110624018386566/9811856974</string>-->
-
-    <!--  TEST ADS  -->
-    <string name="ads_app_id" translatable="false">ca-app-pub-3940256099942544~3347511713</string>
-    <string name="banner_chat" translatable="false">ca-app-pub-3940256099942544/6300978111</string>
-    <string name="banner_history" translatable="false">ca-app-pub-3940256099942544/6300978111</string>
-    <string name="ad_open_app" translatable="false">ca-app-pub-3940256099942544/3419835294</string>
-    <string name="default_number">953 314 059</string>
-
+    <string name="default_number" translatable="false">953 314 059</string>
     <string name="string_share_image">Share Image</string>
     <string name="text_chat_disclaimer">Type the number and start a direct WhatsApp chat without saving or adding it as a contact.</string>
     <string name="text_enter_your_message">Enter your message</string>
     <string name="text_generate_qr">Generate QR</string>
     <string name="text_share_link">Share Link</string>
     <string name="text_enter_phone_number">Enter a phone number</string>
+    <string name="text_leave_a_review">Leave us a Review</string>
+    <string name="tex_support_us">Support Us</string>
+    <string name="text_share_the_app">Share the App</string>
+    <string name="text_other_apps">Other Apps</string>
+    <string name="text_about">About</string>
+    <string name="text_privacy_policy">Privacy Policy</string>
+    <string name="text_terms_and_conditions">Terms and Conditions</string>
+    <string name="text_version">Version</string>
+
+    <string name="text_download_app">Send messages without saving WhatsApp numbers!</string>
+    <string name="text_create_new_qr">Create new QR</string>
+    <string name="text_share_qr">Share QR</string>
+    <string name="text_no_history">No history</string>
+    <string name="text_without_saving_contact">Without Saving\nContact</string>
+    <string name="text_no_need_to_save">No need to save the contact, just type in the number and start chatting, it\'s easy!</string>
+    <string name="text_direct_chat">Direct Chat</string>
+    <string name="text_send_messages_and_media">Send messages and media directly to any number without saving the contact.</string>
+    <string name="text_quick_and_neasy_to_use">Quick and \neasy to use</string>
+    <string name="text_start_sending_messages_in_an_easy_and_simple_way">Start sending messages in an easy and simple way.</string>
+    <string name="text_skip">Skip</string>
+
+
+
+    <!--  ADS  -->
+    <!--    <string name="ads_app_id" translatable="false">ca-app-pub-7110624018386566~4305730496</string>-->
+    <!--    <string name="banner_chat" translatable="false">ca-app-pub-7110624018386566/9936496975</string>-->
+    <!--    <string name="banner_history" translatable="false">ca-app-pub-7110624018386566/6520189663</string>-->
+    <!--    <string name="ad_open_app" translatable="false">ca-app-pub-7110624018386566/9811856974</string>-->
+<!--    <string name="banner_qr" translatable="false">ca-app-pub-7110624018386566/1396854911</string>-->
+<!--    <string name="banner_link" translatable="false">ca-app-pub-7110624018386566/5598155505</string>-->
+
+    <!--  TEST ADS  -->
+    <string name="ads_app_id" translatable="false">ca-app-pub-3940256099942544~3347511713</string>
+    <string name="banner_chat" translatable="false">ca-app-pub-3940256099942544/6300978111</string>
+    <string name="banner_history" translatable="false">ca-app-pub-3940256099942544/6300978111</string>
+    <string name="banner_qr" translatable="false">ca-app-pub-3940256099942544/6300978111</string>
+    <string name="banner_link" translatable="false">ca-app-pub-3940256099942544/6300978111</string>
+    <string name="ad_open_app" translatable="false">ca-app-pub-3940256099942544/3419835294</string>
+
 </resources>
