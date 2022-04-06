@@ -22,6 +22,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.DirectChat">
         <activity
+            android:name=".ui.chat.ChatActivity"
+            android:exported="false" />
+        <activity
             android:name=".ui.messages.AddEditMessageActivity"
             android:exported="false" />
         <activity

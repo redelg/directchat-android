@@ -2,67 +2,87 @@ package com.codergang.directchat.ui.chat
 
 import android.content.Intent
 import android.net.Uri
+import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
+import android.util.DisplayMetrics
 import android.widget.Toast
-import androidx.fragment.app.Fragment
-import androidx.fragment.app.viewModels
 import com.codergang.directchat.R
 import com.codergang.directchat.data.entity.ChatDB
-import com.codergang.directchat.databinding.ChatFragmentBinding
+import com.codergang.directchat.databinding.ActivityChatBinding
 import com.codergang.directchat.ui.util.PhoneTextWatcher
 import com.codergang.directchat.ui.util.hideKeyboard
 import com.codergang.directchat.ui.util.setSafeOnClickListener
 import com.codergang.directchat.ui.util.showSnackBar
 import com.google.android.gms.ads.AdRequest
+import com.google.android.gms.ads.AdSize
+import com.google.android.gms.ads.AdView
 import java.util.*
 
+class ChatActivity : AppCompatActivity() {
 
-class ChatFragment : Fragment() {
+    private lateinit var binding: ActivityChatBinding
+    private lateinit var adView: AdView
+    private val adSize: AdSize
+        get() {
+            val display = windowManager.defaultDisplay
+            val outMetrics = DisplayMetrics()
+            display.getMetrics(outMetrics)
 
-    private lateinit var binding: ChatFragmentBinding
-    private val viewModel: ChatViewModel by viewModels()
+            val density = outMetrics.density
 
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View {
-        binding = ChatFragmentBinding.inflate(layoutInflater)
-        return binding.root
-    }
+            var adWidthPixels = binding.bannerContainer.width.toFloat()
+            if (adWidthPixels == 0f) {
+                adWidthPixels = outMetrics.widthPixels.toFloat()
+            }
 
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
+            val adWidth = (adWidthPixels / density).toInt()
+            return AdSize.getCurrentOrientationAnchoredAdaptiveBannerAdSize(this, adWidth)
+        }
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        binding = ActivityChatBinding.inflate(layoutInflater)
+        setContentView(binding.root)
+
+        setSupportActionBar(binding.toolbar)
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+
+        initBanner()
         setup()
-        loadAd()
-    }
-
-    private fun loadAd() {
-        val adRequest: AdRequest = AdRequest.Builder().build()
-        binding.banner.loadAd(adRequest)
+        initObservers()
     }
 
     private fun setup() {
+        val mensaje = intent.getStringExtra("message") ?: ""
         binding.etCarrierNumber.addTextChangedListener(PhoneTextWatcher())
         binding.btnChat.setSafeOnClickListener {
             val number = binding.etCarrierNumber.text.toString().trim()
             if (number.isNotEmpty()) {
-                openWhatsApp("${binding.ccp.selectedCountryCode}${number.replace("-", "")}")
-                viewModel.saveChat(
-                    ChatDB(
-                        Date().time,
-                        "${binding.ccp.selectedCountryCode}${number.replace("-", "")}",
-                        "+${binding.ccp.selectedCountryCode} ${number.replace("-", " ")}",
-                        number.replace("-", "")
-                    )
-                )
+                openWhatsApp("${binding.ccp.selectedCountryCode}${number.replace("-", "")}", Uri.encode(mensaje))
             }else {
-                Toast.makeText(requireContext(), getString(R.string.text_enter_phone_number) , Toast.LENGTH_LONG).show()
+                Toast.makeText(this, getString(R.string.text_enter_phone_number) , Toast.LENGTH_LONG).show()
             }
         }
         setupPhone()
+        binding.etContent.setText(mensaje)
+    }
+
+    private fun initObservers() {
+
+    }
+
+    private fun initBanner() {
+        adView = AdView(this)
+        adView.adUnitId = getString(R.string.banner_chat)
+        binding.bannerContainer.addView(adView)
+        adView.adSize = adSize
+        val adRequest: AdRequest = AdRequest.Builder().build()
+        adView.loadAd(adRequest)
+    }
+
+    override fun onSupportNavigateUp(): Boolean {
+        onBackPressed()
+        return super.onSupportNavigateUp()
     }
 
     private fun setupPhone(){
@@ -141,26 +161,14 @@ class ChatFragment : Fragment() {
         }
     }
 
-    private fun openWhatsApp(numero: String) {
+    private fun openWhatsApp(numero: String, mensaje: String) {
         try {
             val intent = Intent(Intent.ACTION_VIEW)
-            intent.data = Uri.parse("https://wa.me/$numero/?text=")
+            intent.data = Uri.parse("https://wa.me/$numero/?text=$mensaje")
             startActivity(intent)
         } catch (e: Exception) {
             showSnackBar(binding.root, "WhatsApp is not Installed")
         }
-//        return
-//        val sendIntent = Intent(Intent.ACTION_SENDTO, Uri.parse("smsto:$numero"))
-//        sendIntent.setPackage("com.whatsapp")
-//        if (requireActivity().intent.resolveActivity(requireActivity().packageManager) == null) {
-//            showSnackBar(binding.root, "Para continuar, instale Whatsapp")
-//            return
-//        }
-//        startActivity(sendIntent)
-    }
-
-    fun setNumber(item: ChatDB){
-        binding.etCarrierNumber.setText(item.numberWithoutCode)
     }
 
 }

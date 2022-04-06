@@ -12,6 +12,8 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.codergang.directchat.data.entity.ChatDB
 import com.codergang.directchat.data.entity.MessageDB
 import com.codergang.directchat.databinding.MessagesFragmentBinding
+import com.codergang.directchat.ui.chat.ChatActivity
+import com.codergang.directchat.ui.util.onChange
 
 class MessagesFragment : Fragment() {
 
@@ -39,11 +41,20 @@ class MessagesFragment : Fragment() {
         binding.fabAdd.setOnClickListener {
             startActivity(Intent(requireContext(), AddEditMessageActivity::class.java))
         }
+        binding.search.onChange {
+            adapter.filter(it.toString())
+        }
     }
 
     private fun initObservers() {
         viewModel.messages.observe(viewLifecycleOwner) {
-            adapter.update(it)
+            if (it.isEmpty()) {
+                showEmpty()
+            } else {
+                hideEmpty()
+            }
+            adapter.items = it
+            adapter.noFilterItems = it
         }
     }
 
@@ -54,7 +65,9 @@ class MessagesFragment : Fragment() {
     }
 
     private fun onDial(item: MessageDB) {
-
+        startActivity(Intent(requireContext(), ChatActivity::class.java).apply {
+            putExtra("message", item.content)
+        })
     }
 
     private fun onShare(item: MessageDB) {
@@ -70,6 +83,16 @@ class MessagesFragment : Fragment() {
             message
         )
         startActivity(Intent.createChooser(i, "Share URL"))
+    }
+
+    private fun showEmpty() {
+        binding.data.visibility = View.GONE
+        binding.empty.visibility = View.VISIBLE
+    }
+
+    private fun hideEmpty() {
+        binding.data.visibility = View.VISIBLE
+        binding.empty.visibility = View.GONE
     }
 
 }
