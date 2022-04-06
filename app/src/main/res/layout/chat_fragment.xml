@@ -54,6 +54,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="4dp"
+                app:boxStrokeWidth="0dp"
                 android:background="@drawable/border_shape"
                 android:hint="@string/default_number"
                 app:hintEnabled="false">

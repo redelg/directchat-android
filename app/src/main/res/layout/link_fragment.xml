@@ -58,6 +58,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="4dp"
+            app:boxStrokeWidth="0dp"
             android:background="@drawable/border_shape"
             android:hint="@string/default_number"
             app:hintEnabled="false">
@@ -86,6 +87,7 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
+        app:boxStrokeWidth="0dp"
         android:background="@drawable/border_shape"
         android:hint="@string/default_number"
         app:hintEnabled="false"

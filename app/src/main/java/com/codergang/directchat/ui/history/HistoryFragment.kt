@@ -48,15 +48,15 @@ class HistoryFragment : Fragment() {
     }
 
     private fun setObservers() {
-        viewModel.chats.observe(viewLifecycleOwner, {
-            if(it.isEmpty()){
+        viewModel.chats.observe(viewLifecycleOwner) {
+            if (it.isEmpty()) {
                 showEmpty()
-            }else {
+            } else {
                 hideEmpty()
             }
             adapter.items = it
             adapter.noFilterItems = it
-        })
+        }
     }
 
     private fun onClick(item: ChatDB) {

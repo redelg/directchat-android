@@ -10,8 +10,11 @@
         <entry key="app/src/main/res/drawable/ic_baseline_search_24.xml" value="0.3921875" />
         <entry key="app/src/main/res/drawable/ic_delete.xml" value="0.3921875" />
         <entry key="app/src/main/res/drawable/ic_launcher_background.xml" value="0.3921875" />
+        <entry key="app/src/main/res/drawable/ic_share_history.xml" value="0.286" />
+        <entry key="app/src/main/res/drawable/ic_splash.xml" value="0.3707692307692308" />
         <entry key="app/src/main/res/drawable/splash_drawable.xml" value="0.3921875" />
         <entry key="app/src/main/res/drawable/tab_background.xml" value="0.29270833333333335" />
+        <entry key="app/src/main/res/layout/activity_add_edit_message.xml" value="0.37604166666666666" />
         <entry key="app/src/main/res/layout/activity_create_code.xml" value="0.23697916666666666" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.3619791666666667" />
         <entry key="app/src/main/res/layout/activity_presentation.xml" value="0.37604166666666666" />
@@ -23,11 +26,15 @@
         <entry key="app/src/main/res/layout/fragment_step_two.xml" value="0.2671875" />
         <entry key="app/src/main/res/layout/history_fragment.xml" value="0.37604166666666666" />
         <entry key="app/src/main/res/layout/item_history.xml" value="0.36041666666666666" />
+        <entry key="app/src/main/res/layout/item_mensaje.xml" value="0.37604166666666666" />
         <entry key="app/src/main/res/layout/item_phone_number.xml" value="0.37604166666666666" />
         <entry key="app/src/main/res/layout/layout_phone_input.xml" value="0.37604166666666666" />
         <entry key="app/src/main/res/layout/link_fragment.xml" value="0.23958333333333334" />
+        <entry key="app/src/main/res/layout/messages_fragment.xml" value="0.37604166666666666" />
         <entry key="app/src/main/res/layout/settings_fragment.xml" value="0.259375" />
+        <entry key="app/src/main/res/menu/menu_delete.xml" value="0.37604166666666666" />
         <entry key="app/src/main/res/menu/menu_main.xml" value="0.37604166666666666" />
+        <entry key="app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.3707692307692308" />
       </map>
     </option>
   </component>

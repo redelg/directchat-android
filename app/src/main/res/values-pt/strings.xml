@@ -24,6 +24,7 @@
     <string name="text_create_new_qr">Criar novo QR</string>
     <string name="text_share_qr">Compartilhe QR</string>
     <string name="text_no_history">Sem histórico</string>
+    <string name="text_no_predefined_messages">Sem mensagens pré-definidas\nToque (+) para adicionar uma mensagem pré-definida.</string>
     <string name="text_without_saving_contact">Se salvar\nContato</string>
     <string name="text_no_need_to_save">Não é preciso salvar o contato, basta digitar o número e começar a conversar, é fácil!</string>
     <string name="text_direct_chat">Chat Direto</string>
@@ -31,5 +32,12 @@
     <string name="text_quick_and_neasy_to_use">Rápido e fácil \nde usar</string>
     <string name="text_start_sending_messages_in_an_easy_and_simple_way">Comece a enviar mensagens de uma maneira fácil e simples.</string>
     <string name="text_skip">Saltar</string>
+
+    <string name="text_enter_title">Introduza um título</string>
+    <string name="text_enter_message">Introduza a mensagem</string>
+
+    <string name="text_save">Salvar</string>
+    <string name="text_edit_message">Editar mensagem</string>
+    <string name="text_new_message">Adicionar mensagem</string>
 
 </resources>

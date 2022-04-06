@@ -6,12 +6,15 @@ import androidx.room.Room
 import androidx.room.RoomDatabase
 import com.codergang.directchat.R
 import com.codergang.directchat.data.dao.ChatDAO
+import com.codergang.directchat.data.dao.MessageDAO
 import com.codergang.directchat.data.entity.ChatDB
+import com.codergang.directchat.data.entity.MessageDB
 
-@Database(entities = [ChatDB::class], version = 1, exportSchema = false)
+@Database(entities = [ChatDB::class, MessageDB::class], version = 3, exportSchema = false)
 abstract class ChatDatabase: RoomDatabase() {
 
     abstract fun chatDao(): ChatDAO
+    abstract fun messageDao(): MessageDAO
 
     companion object {
         private  var instancia: ChatDatabase? = null

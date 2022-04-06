@@ -25,6 +25,7 @@
     <string name="text_create_new_qr">Create new QR</string>
     <string name="text_share_qr">Share QR</string>
     <string name="text_no_history">No history</string>
+    <string name="text_no_predefined_messages">No predefined messages\nTap (+) to add a predefined message.</string>
     <string name="text_without_saving_contact">Without Saving\nContact</string>
     <string name="text_no_need_to_save">No need to save the contact, just type in the number and start chatting, it\'s easy!</string>
     <string name="text_direct_chat">Direct Chat</string>
@@ -33,13 +34,19 @@
     <string name="text_start_sending_messages_in_an_easy_and_simple_way">Start sending messages in an easy and simple way.</string>
     <string name="text_skip">Skip</string>
 
+    <string name="text_enter_title">Enter a title</string>
+    <string name="text_enter_message">Enter a message</string>
+
+    <string name="text_save">Save</string>
+    <string name="text_edit_message">Edit message</string>
+    <string name="text_new_message">New message</string>
 
 
     <!--  ADS  -->
-    <!--    <string name="ads_app_id" translatable="false">ca-app-pub-7110624018386566~4305730496</string>-->
-    <!--    <string name="banner_chat" translatable="false">ca-app-pub-7110624018386566/9936496975</string>-->
-    <!--    <string name="banner_history" translatable="false">ca-app-pub-7110624018386566/6520189663</string>-->
-    <!--    <string name="ad_open_app" translatable="false">ca-app-pub-7110624018386566/9811856974</string>-->
+<!--    <string name="ads_app_id" translatable="false">ca-app-pub-7110624018386566~4305730496</string>-->
+<!--    <string name="banner_chat" translatable="false">ca-app-pub-7110624018386566/9936496975</string>-->
+<!--    <string name="banner_history" translatable="false">ca-app-pub-7110624018386566/6520189663</string>-->
+<!--    <string name="ad_open_app" translatable="false">ca-app-pub-7110624018386566/9811856974</string>-->
 <!--    <string name="banner_qr" translatable="false">ca-app-pub-7110624018386566/1396854911</string>-->
 <!--    <string name="banner_link" translatable="false">ca-app-pub-7110624018386566/5598155505</string>-->
 

@@ -9,6 +9,7 @@ import com.codergang.directchat.databinding.ActivityMainBinding
 import com.codergang.directchat.ui.chat.ChatFragment
 import com.codergang.directchat.ui.history.HistoryFragment
 import com.codergang.directchat.ui.link.LinkFragment
+import com.codergang.directchat.ui.messages.MessagesFragment
 import com.codergang.directchat.ui.settings.SettingsFragment
 import com.google.android.material.tabs.TabLayoutMediator
 
@@ -29,11 +30,12 @@ class MainActivity : AppCompatActivity() {
         adapter.setItems(listOf(
             ChatFragment(),
             HistoryFragment(),
+            MessagesFragment(),
             LinkFragment(),
             SettingsFragment()
         ))
         binding.viewPager.adapter = adapter
-        binding.viewPager.offscreenPageLimit = 4
+        binding.viewPager.offscreenPageLimit = 5
         setTabLayout()
 //        binding.bottomNav.setOnItemSelectedListener {
 //            when(it.itemId){
@@ -49,8 +51,9 @@ class MainActivity : AppCompatActivity() {
             when(pos){
                 0 -> tab.setIcon(R.drawable.ic_phone)
                 1 -> tab.setIcon(R.drawable.ic_history)
-                2 -> tab.setIcon(R.drawable.ic_baseline_qr_code_24)
-                3 -> tab.setIcon(R.drawable.ic_cog)
+                2 -> tab.setIcon(R.drawable.ic_baseline_message_24)
+                3 -> tab.setIcon(R.drawable.ic_baseline_qr_code_24)
+                4 -> tab.setIcon(R.drawable.ic_cog)
             }
         }.attach()
     }

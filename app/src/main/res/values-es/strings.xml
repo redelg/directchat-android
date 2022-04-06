@@ -24,6 +24,7 @@
     <string name="text_create_new_qr">Crear nuevo QR</string>
     <string name="text_share_qr">Compartir QR</string>
     <string name="text_no_history">Sin historial</string>
+    <string name="text_no_predefined_messages">Sin mensajes predefinidos\nPresiona (+) para agregar un mensaje predefinido.</string>
     <string name="text_without_saving_contact">Sin Guardar\nContacto</string>
     <string name="text_no_need_to_save">Escribe el número e inicia un chat directo en WhatsApp sin necesidad de guardar o agregar como contacto.</string>
     <string name="text_direct_chat">Chat Directo</string>
@@ -31,5 +32,12 @@
     <string name="text_quick_and_neasy_to_use">Rápido y Fácil \nde usar</string>
     <string name="text_start_sending_messages_in_an_easy_and_simple_way">Empieza a enviar mensajes de una manera fácil y sencilla.</string>
     <string name="text_skip">Omitir</string>
+
+    <string name="text_enter_title">Ingrese un título</string>
+    <string name="text_enter_message">Ingrese un mensaje</string>
+
+    <string name="text_save">Guardar</string>
+    <string name="text_edit_message">Editar mensaje</string>
+    <string name="text_new_message">Nuevo mensaje</string>
 
 </resources>

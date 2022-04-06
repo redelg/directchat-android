@@ -10,7 +10,7 @@ import kotlinx.coroutines.launch
 
 class ChatViewModel(application: Application) : AndroidViewModel(application) {
 
-    val database: ChatDatabase = ChatDatabase.getInstancia(application)
+    private val database: ChatDatabase = ChatDatabase.getInstancia(application)
 
     fun saveChat(chat: ChatDB) = viewModelScope.launch {
         database.chatDao().insert(chat)
