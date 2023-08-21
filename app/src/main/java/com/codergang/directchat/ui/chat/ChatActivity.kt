@@ -75,7 +75,7 @@ class ChatActivity : AppCompatActivity() {
         adView = AdView(this)
         adView.adUnitId = getString(R.string.banner_chat)
         binding.bannerContainer.addView(adView)
-        adView.adSize = adSize
+        adView.setAdSize(adSize)
         val adRequest: AdRequest = AdRequest.Builder().build()
         adView.loadAd(adRequest)
     }
