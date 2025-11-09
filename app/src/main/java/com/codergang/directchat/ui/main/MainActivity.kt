@@ -37,13 +37,6 @@ class MainActivity : AppCompatActivity() {
         binding.viewPager.adapter = adapter
         binding.viewPager.offscreenPageLimit = 5
         setTabLayout()
-//        binding.bottomNav.setOnItemSelectedListener {
-//            when(it.itemId){
-//                R.id.menu_chat -> binding.viewPager.setCurrentItem(0, true)
-//                R.id.menu_history -> binding.viewPager.setCurrentItem(1, true)
-//            }
-//            true
-//        }
     }
 
     private fun setTabLayout(){
