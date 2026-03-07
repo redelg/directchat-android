@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">DirectChat</string>
+    <string name="app_name">TapChat</string>
     <string name="text_home">Home</string>
     <string name="text_chat">Start Chat</string>
     <string name="text_history">History</string>
@@ -7,7 +7,7 @@
 
     <string name="default_number" translatable="false">953 314 059</string>
     <string name="string_share_image">Share Image</string>
-    <string name="text_chat_disclaimer">Type the number and start a direct WhatsApp chat without saving or adding it as a contact.</string>
+    <string name="text_chat_disclaimer">Type a number and open a direct chat link without saving it as a contact.</string>
     <string name="text_enter_your_message">Enter your message</string>
     <string name="text_generate_qr">Generate QR</string>
     <string name="text_share_link">Share Link</string>
@@ -21,34 +21,114 @@
     <string name="text_terms_and_conditions">Terms and Conditions</string>
     <string name="text_version">Version</string>
 
-    <string name="text_download_app">Send messages without saving WhatsApp numbers!</string>
+    <string name="text_download_app">Open direct chats without saving contact numbers.</string>
     <string name="text_create_new_qr">Create new QR</string>
     <string name="text_share_qr">Share QR</string>
     <string name="text_no_history">No history</string>
     <string name="text_no_predefined_messages">No predefined messages\nTap (+) to add a predefined message.</string>
     <string name="text_without_saving_contact">Without Saving\nContact</string>
-    <string name="text_no_need_to_save">No need to save the contact, just type in the number and start chatting, it\'s easy!</string>
+    <string name="text_no_need_to_save">No need to save the contact. Type the number and open a chat instantly.</string>
     <string name="text_direct_chat">Direct Chat</string>
     <string name="text_send_messages_and_media">Send messages and media directly to any number without saving the contact.</string>
     <string name="text_quick_and_neasy_to_use">Quick and \neasy to use</string>
     <string name="text_start_sending_messages_in_an_easy_and_simple_way">Start sending messages in an easy and simple way.</string>
     <string name="text_skip">Skip</string>
+    <string name="text_brand_disclaimer">Independent utility app. Not affiliated with any third-party messaging brand.</string>
+    <string name="text_no_compatible_chat_app">No compatible messaging app was found on this device.</string>
+    <string name="text_legal_unavailable">Legal content is not available right now.</string>
+    <string name="text_no_saved_contacts">No saved contacts</string>
+    <string name="text_instant_open">Instant open</string>
+    <string name="text_message_optional">Optional message</string>
+    <string name="text_message_optional_hint">This text will be prefilled when the chat opens.</string>
+    <string name="text_number_preview">Preview: %1$s</string>
+    <string name="text_select_country">Select country</string>
+    <string name="text_search_country">Search country</string>
+    <string name="text_search_country_placeholder">Search by name or code</string>
 
     <string name="text_enter_title">Enter a title</string>
     <string name="text_enter_message">Enter a message</string>
 
     <string name="text_save">Save</string>
+    <string name="text_delete">Delete</string>
     <string name="text_edit_message">Edit message</string>
     <string name="text_new_message">New message</string>
+    <string name="text_monetization">Monetization</string>
+    <string name="text_ads_removed_active">Ads removed are active on this device.</string>
+    <string name="text_ads_enabled">Ads are enabled.</string>
+    <string name="text_premium_active">Premium features are currently unlocked.</string>
+    <string name="text_buy_remove_ads">Buy remove ads</string>
+    <string name="text_buy_lifetime">Buy Lifetime</string>
+    <string name="text_restore_purchase">Restore purchases</string>
+    <string name="text_manage_subscription">Manage purchases</string>
+    <string name="text_one_time_unlock">One-time unlock</string>
+    <string name="text_remove_ads_forever">Remove ads and unlock premium tools permanently on this device.</string>
+    <string name="text_status_active">Active</string>
+    <string name="text_status_lifetime">Lifetime</string>
+    <string name="text_pro_benefit_no_ads">No ads across the entire app</string>
+    <string name="text_pro_benefit_power_tools">Unlimited sends, QR, templates and favorites</string>
+    <string name="text_pro_benefit_lifetime">One payment, lifetime access</string>
+    <string name="text_premium_feature">Premium Feature</string>
+    <string name="text_premium_feature_description">You reached the free template limit. Watch a rewarded ad to unlock premium templates for 24 hours, or buy remove ads for permanent access.</string>
+    <string name="text_watch_ad_unlock">Watch ad to unlock</string>
+    <string name="text_rewarded_not_ready">Rewarded ad not ready yet. Please try again.</string>
+    <string name="text_premium_unlocked">Premium unlocked for 24 hours.</string>
+    <string name="text_purchase_not_active">No active purchase found on this device.</string>
+    <string name="text_purchase_completed">Purchase completed successfully.</string>
+    <string name="text_purchases_restored">Purchases restored successfully.</string>
+    <string name="text_purchases_unavailable">Purchases are temporarily unavailable. Finish Play/RevenueCat setup first.</string>
+    <string name="text_done">Done</string>
+    <string name="text_daily_limit_reached">You\'ve reached your daily limit of %d free sends. Upgrade to Pro for unlimited sends.</string>
+    <string name="text_sends_remaining">%d sends remaining today</string>
+    <string name="text_qr_pro_only">QR code generation is a Pro feature. Upgrade to unlock it.</string>
+    <string name="text_history_limit_free">Showing %1$d of %2$d recent contacts. Upgrade to Pro to see all.</string>
+    <string name="text_show_all_history">Show all</string>
+    <string name="text_upgrade_to_pro">Upgrade to Pro</string>
+    <string name="text_favorite">Favorite</string>
+    <string name="text_favorites_limit">You can only have %d favorite on the free plan. Upgrade to Pro for unlimited favorites.</string>
+    <string name="nav_chat">Chat</string>
+    <string name="nav_history">History</string>
+    <string name="nav_templates">Templates</string>
+    <string name="nav_settings">Settings</string>
 
+    <string name="text_qr_code">QR Code</string>
+    <string name="text_link_generator">Link</string>
+    <string name="text_save_photo">Save Photo</string>
+    <string name="text_copy_link">Copy Link</string>
+    <string name="text_copied">Copied!</string>
+    <string name="text_photo_saved">Photo saved</string>
+    <string name="text_share">Share</string>
+    <string name="text_enter_number_first">Enter a phone number first</string>
+    <string name="text_optional_message">Optional message</string>
+    <string name="text_phone_number">Phone number</string>
+    <string name="text_generated_link">Generated link</string>
+
+    <string name="text_all_categories">All</string>
+    <string name="text_category_general">General</string>
+    <string name="text_category_business">Business</string>
+    <string name="text_category_personal">Personal</string>
+    <string name="text_category_sales">Sales</string>
+    <string name="text_category_support">Support</string>
+    <string name="text_manage_categories">Manage Categories</string>
+    <string name="text_add_category">Add Category</string>
+    <string name="text_rename_category">Rename</string>
+    <string name="text_delete_category">Delete Category</string>
+    <string name="text_category">Category</string>
+    <string name="text_default_category_cannot_delete">Default categories cannot be deleted.</string>
+    <string name="text_messages_moved_to_general">Messages moved to General.</string>
+    <string name="text_category_name">Category name</string>
+    <string name="text_delete_category_confirm">Deleting this category will move its messages to General. Continue?</string>
+    <string name="text_category_pro_only">This category is a Pro feature. Upgrade to unlock it.</string>
+    <string name="text_search_messages">Search messages</string>
 
     <!--  ADS  -->
     <string name="ads_app_id" translatable="false">ca-app-pub-7110624018386566~4305730496</string>
-    <string name="banner_chat" translatable="false">ca-app-pub-7110624018386566/9936496975</string>
-    <string name="banner_history" translatable="false">ca-app-pub-7110624018386566/6520189663</string>
-    <string name="ad_open_app" translatable="false">ca-app-pub-7110624018386566/9811856974</string>
-    <string name="banner_qr" translatable="false">ca-app-pub-7110624018386566/1396854911</string>
-    <string name="banner_link" translatable="false">ca-app-pub-7110624018386566/5598155505</string>
+    <string name="banner_chat" translatable="false">ca-app-pub-7110624018386566/8827569866</string>
+    <string name="banner_history" translatable="false">ca-app-pub-7110624018386566/7859555823</string>
+    <string name="ad_open_app" translatable="false">ca-app-pub-7110624018386566/2361253921</string>
+    <string name="banner_qr" translatable="false">ca-app-pub-7110624018386566/3334821602</string>
+    <string name="banner_link" translatable="false">ca-app-pub-7110624018386566/3589312363</string>
+    <string name="ad_interstitial_chat" translatable="false">ca-app-pub-7110624018386566/8399446028</string>
+    <string name="ad_rewarded_unlock" translatable="false">ca-app-pub-7110624018386566/9044714790</string>
 
     <!--  TEST ADS  -->
 <!--    <string name="ads_app_id" translatable="false">ca-app-pub-3940256099942544~3347511713</string>-->

@@ -1,0 +1,13 @@
+{
+  "generatedAt": "2026-02-28T01:07:19.088Z",
+  "dryRun": false,
+  "packageName": "com.codergang.chatdirecto",
+  "inputFile": "/Users/renzodelgado/Documents/Dev/Personal/Apps/CoderGang/Android/DirectChat/docs/play-listings.json",
+  "editId": "09586652828632778948",
+  "changedLanguages": [
+    "es-419",
+    "en-US",
+    "pt-BR"
+  ],
+  "error": "HTTP 403 Forbidden: {\"error\":{\"code\":403,\"message\":\"The caller does not have permission\",\"status\":\"PERMISSION_DENIED\"}}"
+}

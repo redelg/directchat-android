@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "633869157322",
+    "project_id": "direct-chat-b259a",
+    "storage_bucket": "direct-chat-b259a.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:633869157322:android:c62d081ae2bf4a2031c533",
+        "android_client_info": {
+          "package_name": "com.codergang.chatdirecto"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCw208PxjXFP_7uP9bSm3GLd2pQWxHwNuA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

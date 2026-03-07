@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Chat Directo</string>
+    <string name="app_name">TapChat</string>
     <string name="text_home">Inicio</string>
     <string name="text_chat">Iniciar Chat</string>
     <string name="text_history">Historial</string>
 
     <string name="string_share_image">Compartir Imagen</string>
-    <string name="text_chat_disclaimer">Escribe el número e inicia un chat directo en WhatsApp sin necesidad de guardar o agregar como contacto.</string>
+    <string name="text_chat_disclaimer">Escribe el número y abre un chat directo sin guardarlo como contacto.</string>
     <string name="text_enter_your_message">Escribe tu mensaje</string>
     <string name="text_generate_qr">Generar QR</string>
     <string name="text_share_link">Compartir Enlace</string>
@@ -20,24 +20,103 @@
     <string name="text_terms_and_conditions">Términos y Condiciones</string>
     <string name="text_version">Versión</string>
 
-    <string name="text_download_app">Envia mensajes a WhatsApp sin guardar el número!</string>
+    <string name="text_download_app">Abre chats directos sin guardar números de contacto.</string>
     <string name="text_create_new_qr">Crear nuevo QR</string>
     <string name="text_share_qr">Compartir QR</string>
     <string name="text_no_history">Sin historial</string>
     <string name="text_no_predefined_messages">Sin mensajes predefinidos\nPresiona (+) para agregar un mensaje predefinido.</string>
     <string name="text_without_saving_contact">Sin Guardar\nContacto</string>
-    <string name="text_no_need_to_save">Escribe el número e inicia un chat directo en WhatsApp sin necesidad de guardar o agregar como contacto.</string>
+    <string name="text_no_need_to_save">No necesitas guardar el contacto. Escribe el número y abre el chat al instante.</string>
     <string name="text_direct_chat">Chat Directo</string>
     <string name="text_send_messages_and_media">Envíe mensajes y medios directamente a cualquier número sin guardar el contacto.</string>
     <string name="text_quick_and_neasy_to_use">Rápido y Fácil \nde usar</string>
     <string name="text_start_sending_messages_in_an_easy_and_simple_way">Empieza a enviar mensajes de una manera fácil y sencilla.</string>
     <string name="text_skip">Omitir</string>
+    <string name="text_brand_disclaimer">App utilitaria independiente. No está afiliada a ninguna marca de mensajería.</string>
+    <string name="text_no_compatible_chat_app">No se encontró una app de mensajería compatible en este dispositivo.</string>
+    <string name="text_legal_unavailable">El contenido legal no está disponible en este momento.</string>
+    <string name="text_no_saved_contacts">Sin guardar contactos</string>
+    <string name="text_instant_open">Apertura instantánea</string>
+    <string name="text_message_optional">Mensaje opcional</string>
+    <string name="text_message_optional_hint">Este texto se completará automáticamente cuando se abra el chat.</string>
+    <string name="text_number_preview">Vista previa: %1$s</string>
+    <string name="text_select_country">Seleccionar país</string>
+    <string name="text_search_country">Buscar país</string>
+    <string name="text_search_country_placeholder">Busca por nombre o código</string>
 
     <string name="text_enter_title">Ingrese un título</string>
     <string name="text_enter_message">Ingrese un mensaje</string>
 
     <string name="text_save">Guardar</string>
+    <string name="text_delete">Eliminar</string>
     <string name="text_edit_message">Editar mensaje</string>
     <string name="text_new_message">Nuevo mensaje</string>
+    <string name="text_monetization">Monetización</string>
+    <string name="text_ads_removed_active">Los anuncios están desactivados en este dispositivo.</string>
+    <string name="text_ads_enabled">Los anuncios están activados.</string>
+    <string name="text_premium_active">Las funciones premium están desbloqueadas temporalmente.</string>
+    <string name="text_buy_remove_ads">Comprar sin anuncios</string>
+    <string name="text_buy_lifetime">Comprar de por vida</string>
+    <string name="text_restore_purchase">Restaurar compras</string>
+    <string name="text_manage_subscription">Gestionar compras</string>
+    <string name="text_one_time_unlock">Desbloqueo único</string>
+    <string name="text_remove_ads_forever">Elimina anuncios y desbloquea herramientas premium de forma permanente en este dispositivo.</string>
+    <string name="text_status_active">Activo</string>
+    <string name="text_status_lifetime">Vitalicio</string>
+    <string name="text_pro_benefit_no_ads">Sin anuncios en toda la app</string>
+    <string name="text_pro_benefit_power_tools">Envíos, QR, plantillas y favoritos ilimitados</string>
+    <string name="text_pro_benefit_lifetime">Un solo pago, acceso de por vida</string>
+    <string name="text_premium_feature">Función Premium</string>
+    <string name="text_premium_feature_description">Llegaste al límite gratuito de plantillas. Mira un anuncio recompensado para desbloquear plantillas premium por 24 horas o compra sin anuncios para acceso permanente.</string>
+    <string name="text_watch_ad_unlock">Ver anuncio y desbloquear</string>
+    <string name="text_rewarded_not_ready">El anuncio recompensado aún no está listo. Inténtalo nuevamente.</string>
+    <string name="text_premium_unlocked">Premium desbloqueado por 24 horas.</string>
+    <string name="text_purchase_not_active">No se encontró una compra activa en este dispositivo.</string>
+    <string name="text_purchase_completed">Compra completada correctamente.</string>
+    <string name="text_purchases_restored">Compras restauradas correctamente.</string>
+    <string name="text_purchases_unavailable">Las compras no están disponibles temporalmente. Completa primero la configuración de Play y RevenueCat.</string>
+    <string name="text_done">Listo</string>
+    <string name="text_daily_limit_reached">Alcanzaste el límite diario de %d envíos gratuitos. Actualiza a Pro para envíos ilimitados.</string>
+    <string name="text_sends_remaining">%d envíos restantes hoy</string>
+    <string name="text_qr_pro_only">La generación de QR es una función Pro. Actualiza para desbloquearla.</string>
+    <string name="text_history_limit_free">Mostrando %1$d de %2$d contactos recientes. Actualiza a Pro para ver todos.</string>
+    <string name="text_show_all_history">Ver todos</string>
+    <string name="text_upgrade_to_pro">Actualizar a Pro</string>
+    <string name="text_favorite">Favorito</string>
+    <string name="text_favorites_limit">Solo puedes tener %d favorito en el plan gratuito. Actualiza a Pro para favoritos ilimitados.</string>
+    <string name="nav_chat">Chat</string>
+    <string name="nav_history">Historial</string>
+    <string name="nav_templates">Plantillas</string>
+    <string name="nav_settings">Ajustes</string>
+
+    <string name="text_qr_code">Código QR</string>
+    <string name="text_link_generator">Enlace</string>
+    <string name="text_save_photo">Guardar Foto</string>
+    <string name="text_copy_link">Copiar Enlace</string>
+    <string name="text_copied">¡Copiado!</string>
+    <string name="text_photo_saved">Foto guardada</string>
+    <string name="text_share">Compartir</string>
+    <string name="text_enter_number_first">Ingresa un número primero</string>
+    <string name="text_optional_message">Mensaje opcional</string>
+    <string name="text_phone_number">Número de teléfono</string>
+    <string name="text_generated_link">Enlace generado</string>
+
+    <string name="text_all_categories">Todas</string>
+    <string name="text_category_general">General</string>
+    <string name="text_category_business">Negocios</string>
+    <string name="text_category_personal">Personal</string>
+    <string name="text_category_sales">Ventas</string>
+    <string name="text_category_support">Soporte</string>
+    <string name="text_manage_categories">Administrar categorías</string>
+    <string name="text_add_category">Agregar categoría</string>
+    <string name="text_rename_category">Renombrar</string>
+    <string name="text_delete_category">Eliminar categoría</string>
+    <string name="text_category">Categoría</string>
+    <string name="text_default_category_cannot_delete">Las categorías por defecto no se pueden eliminar.</string>
+    <string name="text_messages_moved_to_general">Mensajes movidos a General.</string>
+    <string name="text_category_name">Nombre de categoría</string>
+    <string name="text_delete_category_confirm">Eliminar esta categoría moverá sus mensajes a General. ¿Continuar?</string>
+    <string name="text_category_pro_only">Esta categoría es una función Pro. Actualiza para desbloquearla.</string>
+    <string name="text_search_messages">Buscar mensajes</string>
 
 </resources>
