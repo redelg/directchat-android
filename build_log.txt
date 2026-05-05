@@ -1,0 +1,349 @@
+Initialized native services in: /Users/renzodelgado/.gradle/native
+Initialized jansi services in: /Users/renzodelgado/.gradle/native
+Found daemon DaemonInfo{pid=71380, address=[c5900624-0874-42ed-a58a-50812b409073 port:63012, addresses:[/127.0.0.1]], state=Idle, lastBusy=1772223307841, context=DefaultDaemonContext[uid=68248770-d7d5-49dd-93a4-9b6fa68c5923,javaHome=/Applications/Android Studio.app/Contents/jbr/Contents/Home,javaVersion=21,javaVendor=JetBrains s.r.o.,daemonRegistryDir=/Users/renzodelgado/.gradle/daemon,pid=71380,idleTimeout=10800000,priority=NORMAL,applyInstrumentationAgent=true,nativeServicesMode=ENABLED,daemonOpts=-Xmx2048m,-Dfile.encoding=UTF-8,-Duser.country=419,-Duser.language=es,-Duser.variant]} however its context does not match the desired criteria.
+JVM is incompatible.
+Wanted: DaemonRequestContext{jvmCriteria=/Users/renzodelgado/Library/Java/JavaVirtualMachines/corretto-17.0.17/Contents/Home (no JDK specified, using current Java home), daemonOpts=[-Xmx2048m, -Dfile.encoding=UTF-8, -Duser.country=419, -Duser.language=es, -Duser.variant], applyInstrumentationAgent=true, nativeServicesMode=ENABLED, priority=NORMAL}
+Actual: DefaultDaemonContext[uid=68248770-d7d5-49dd-93a4-9b6fa68c5923,javaHome=/Applications/Android Studio.app/Contents/jbr/Contents/Home,javaVersion=21,javaVendor=JetBrains s.r.o.,daemonRegistryDir=/Users/renzodelgado/.gradle/daemon,pid=71380,idleTimeout=10800000,priority=NORMAL,applyInstrumentationAgent=true,nativeServicesMode=ENABLED,daemonOpts=-Xmx2048m,-Dfile.encoding=UTF-8,-Duser.country=419,-Duser.language=es,-Duser.variant]
+
+  Looking for a different daemon...
+Found daemon DaemonInfo{pid=91488, address=[0318a968-fbde-4c38-92c5-4cdf66739fb6 port:51322, addresses:[/127.0.0.1]], state=Idle, lastBusy=1772222736449, context=DefaultDaemonContext[uid=873b6a1f-0699-4022-bb82-54aac42bea16,javaHome=/Users/renzodelgado/.antigravity/extensions/redhat.java-1.12.0-darwin-arm64/jre/17.0.4.1-macosx-aarch64,javaVersion=17,javaVendor=Eclipse Adoptium,daemonRegistryDir=/Users/renzodelgado/.gradle/daemon,pid=91488,idleTimeout=10800000,priority=NORMAL,applyInstrumentationAgent=true,nativeServicesMode=ENABLED,daemonOpts=-Xmx2048m,-Dfile.encoding=UTF-8,-Duser.country=419,-Duser.language=es,-Duser.variant]} however its context does not match the desired criteria.
+JVM is incompatible.
+Wanted: DaemonRequestContext{jvmCriteria=/Users/renzodelgado/Library/Java/JavaVirtualMachines/corretto-17.0.17/Contents/Home (no JDK specified, using current Java home), daemonOpts=[-Xmx2048m, -Dfile.encoding=UTF-8, -Duser.country=419, -Duser.language=es, -Duser.variant], applyInstrumentationAgent=true, nativeServicesMode=ENABLED, priority=NORMAL}
+Actual: DefaultDaemonContext[uid=873b6a1f-0699-4022-bb82-54aac42bea16,javaHome=/Users/renzodelgado/.antigravity/extensions/redhat.java-1.12.0-darwin-arm64/jre/17.0.4.1-macosx-aarch64,javaVersion=17,javaVendor=Eclipse Adoptium,daemonRegistryDir=/Users/renzodelgado/.gradle/daemon,pid=91488,idleTimeout=10800000,priority=NORMAL,applyInstrumentationAgent=true,nativeServicesMode=ENABLED,daemonOpts=-Xmx2048m,-Dfile.encoding=UTF-8,-Duser.country=419,-Duser.language=es,-Duser.variant]
+
+  Looking for a different daemon...
+The client will now receive all logging from the daemon (pid: 87214). The daemon log file: /Users/renzodelgado/.gradle/daemon/8.13/daemon-87214.out.log
+Starting 11th build in daemon [uptime: 21 mins 37.547 secs, performance: 98%, GC rate: 0.00/s, heap usage: 0% of 2 GiB]
+Using 12 worker leases.
+Now considering [/Users/renzodelgado/Documents/Dev/Personal/Apps/CoderGang/Android/DirectChat] as hierarchies to watch
+Watching the file system is configured to be enabled if available
+File system watching is active
+Starting Build
+Settings evaluated using settings file '/Users/renzodelgado/Documents/Dev/Personal/Apps/CoderGang/Android/DirectChat/settings.gradle'.
+Projects loaded. Root project using build file '/Users/renzodelgado/Documents/Dev/Personal/Apps/CoderGang/Android/DirectChat/build.gradle'.
+Included projects: [root project 'DirectChat', project ':app']
+
+> Configure project :
+Evaluating root project 'DirectChat' using build file '/Users/renzodelgado/Documents/Dev/Personal/Apps/CoderGang/Android/DirectChat/build.gradle'.
+
+> Configure project :app
+Evaluating project ':app' using build file '/Users/renzodelgado/Documents/Dev/Personal/Apps/CoderGang/Android/DirectChat/app/build.gradle'.
+Resolved plugin [id: 'com.android.application']
+Resolved plugin [id: 'kotlin-android']
+Resolved plugin [id: 'kotlin-kapt']
+Resolved plugin [id: 'org.jetbrains.kotlin.plugin.compose', version: '2.1.0']
+Using default execution profile
+Using Kotlin Gradle Plugin gradle85 variant
+Detected Android Gradle Plugin compose compiler configuration
+Detected Android Gradle Plugin compose compiler configuration
+Detected Android Gradle Plugin compose compiler configuration
+Detected Android Gradle Plugin compose compiler configuration
+Detected Android Gradle Plugin compose compiler configuration
+All projects evaluated.
+Adding -Xuse-inline-scopes-numbers Kotlin compiler flag for task :app:compileDebugKotlin
+Task name matched 'compileDebugKotlin'
+Selected primary task 'compileDebugKotlin' from project :
+Tasks to be executed: [task ':app:checkKotlinGradlePluginConfigurationErrors', task ':app:preBuild', task ':app:preDebugBuild', task ':app:generateDebugBuildConfig', task ':app:checkDebugAarMetadata', task ':app:processDebugNavigationResources', task ':app:compileDebugNavigationResources', task ':app:generateDebugResValues', task ':app:mapDebugSourceSetPaths', task ':app:generateDebugResources', task ':app:mergeDebugResources', task ':app:createDebugCompatibleScreenManifests', task ':app:extractDeepLinksDebug', task ':app:processDebugMainManifest', task ':app:processDebugManifest', task ':app:processDebugManifestForPackage', task ':app:processDebugResources', task ':app:kaptGenerateStubsDebugKotlin', task ':app:kaptDebugKotlin', task ':app:compileDebugKotlin']
+Tasks that were excluded: []
+Resolve mutations for :app:checkKotlinGradlePluginConfigurationErrors (Thread[Execution worker,5,main]) started.
+:app:checkKotlinGradlePluginConfigurationErrors (Thread[Execution worker,5,main]) started.
+
+> Task :app:checkKotlinGradlePluginConfigurationErrors SKIPPED
+Skipping task ':app:checkKotlinGradlePluginConfigurationErrors' as task onlyIf 'errorDiagnostics are present' is false.
+Resolve mutations for :app:preBuild (Thread[Execution worker,5,main]) started.
+:app:preBuild (Thread[Execution worker,5,main]) started.
+
+> Task :app:preBuild UP-TO-DATE
+Skipping task ':app:preBuild' as it has no actions.
+Resolve mutations for :app:preDebugBuild (Thread[Execution worker Thread 11,5,main]) started.
+:app:preDebugBuild (Thread[Execution worker Thread 11,5,main]) started.
+
+> Task :app:preDebugBuild UP-TO-DATE
+Skipping task ':app:preDebugBuild' as it has no actions.
+Resolve mutations for :app:generateDebugBuildConfig (Thread[Execution worker Thread 11,5,main]) started.
+:app:generateDebugBuildConfig (Thread[Execution worker Thread 11,5,main]) started.
+
+> Task :app:generateDebugBuildConfig UP-TO-DATE
+Caching disabled for task ':app:generateDebugBuildConfig' because:
+  Build cache is disabled
+Skipping task ':app:generateDebugBuildConfig' as it is up-to-date.
+Resolve mutations for :app:checkDebugAarMetadata (Thread[Execution worker Thread 11,5,main]) started.
+:app:checkDebugAarMetadata (Thread[Execution worker Thread 11,5,main]) started.
+
+> Task :app:checkDebugAarMetadata UP-TO-DATE
+Caching disabled for task ':app:checkDebugAarMetadata' because:
+  Build cache is disabled
+  Caching has been disabled for the task
+Skipping task ':app:checkDebugAarMetadata' as it is up-to-date.
+Resolve mutations for :app:processDebugNavigationResources (Thread[Execution worker Thread 9,5,main]) started.
+:app:processDebugNavigationResources (Thread[Execution worker Thread 9,5,main]) started.
+
+> Task :app:processDebugNavigationResources UP-TO-DATE
+Caching disabled for task ':app:processDebugNavigationResources' because:
+  Build cache is disabled
+Skipping task ':app:processDebugNavigationResources' as it is up-to-date.
+Resolve mutations for :app:compileDebugNavigationResources (Thread[Execution worker Thread 9,5,main]) started.
+:app:compileDebugNavigationResources (Thread[Execution worker Thread 9,5,main]) started.
+
+> Task :app:compileDebugNavigationResources UP-TO-DATE
+Caching disabled for task ':app:compileDebugNavigationResources' because:
+  Build cache is disabled
+Skipping task ':app:compileDebugNavigationResources' as it is up-to-date.
+Resolve mutations for :app:generateDebugResValues (Thread[Execution worker Thread 9,5,main]) started.
+:app:generateDebugResValues (Thread[Execution worker Thread 9,5,main]) started.
+
+> Task :app:generateDebugResValues UP-TO-DATE
+Caching disabled for task ':app:generateDebugResValues' because:
+  Build cache is disabled
+Skipping task ':app:generateDebugResValues' as it is up-to-date.
+Resolve mutations for :app:mapDebugSourceSetPaths (Thread[Execution worker Thread 9,5,main]) started.
+:app:mapDebugSourceSetPaths (Thread[Execution worker Thread 9,5,main]) started.
+
+> Task :app:mapDebugSourceSetPaths UP-TO-DATE
+Caching disabled for task ':app:mapDebugSourceSetPaths' because:
+  Build cache is disabled
+  Caching has been disabled for the task
+Skipping task ':app:mapDebugSourceSetPaths' as it is up-to-date.
+Resolve mutations for :app:generateDebugResources (Thread[Execution worker Thread 9,5,main]) started.
+:app:generateDebugResources (Thread[Execution worker Thread 9,5,main]) started.
+
+> Task :app:generateDebugResources UP-TO-DATE
+Caching disabled for task ':app:generateDebugResources' because:
+  Build cache is disabled
+Skipping task ':app:generateDebugResources' as it is up-to-date.
+Resolve mutations for :app:mergeDebugResources (Thread[Execution worker Thread 9,5,main]) started.
+:app:mergeDebugResources (Thread[Execution worker Thread 9,5,main]) started.
+
+> Task :app:mergeDebugResources UP-TO-DATE
+Caching disabled for task ':app:mergeDebugResources' because:
+  Build cache is disabled
+Skipping task ':app:mergeDebugResources' as it is up-to-date.
+Resolve mutations for :app:createDebugCompatibleScreenManifests (Thread[Execution worker Thread 9,5,main]) started.
+:app:createDebugCompatibleScreenManifests (Thread[Execution worker Thread 9,5,main]) started.
+
+> Task :app:createDebugCompatibleScreenManifests UP-TO-DATE
+Caching disabled for task ':app:createDebugCompatibleScreenManifests' because:
+  Build cache is disabled
+  Caching has been disabled for the task
+Skipping task ':app:createDebugCompatibleScreenManifests' as it is up-to-date.
+Resolve mutations for :app:extractDeepLinksDebug (Thread[Execution worker Thread 9,5,main]) started.
+:app:extractDeepLinksDebug (Thread[Execution worker Thread 9,5,main]) started.
+
+> Task :app:extractDeepLinksDebug UP-TO-DATE
+Caching disabled for task ':app:extractDeepLinksDebug' because:
+  Build cache is disabled
+Skipping task ':app:extractDeepLinksDebug' as it is up-to-date.
+Resolve mutations for :app:processDebugMainManifest (Thread[Execution worker Thread 9,5,main]) started.
+:app:processDebugMainManifest (Thread[Execution worker Thread 9,5,main]) started.
+
+> Task :app:processDebugMainManifest UP-TO-DATE
+Caching disabled for task ':app:processDebugMainManifest' because:
+  Build cache is disabled
+Skipping task ':app:processDebugMainManifest' as it is up-to-date.
+Resolve mutations for :app:processDebugManifest (Thread[Execution worker Thread 9,5,main]) started.
+:app:processDebugManifest (Thread[Execution worker Thread 9,5,main]) started.
+
+> Task :app:processDebugManifest UP-TO-DATE
+Caching disabled for task ':app:processDebugManifest' because:
+  Build cache is disabled
+Skipping task ':app:processDebugManifest' as it is up-to-date.
+Resolve mutations for :app:processDebugManifestForPackage (Thread[Execution worker Thread 9,5,main]) started.
+:app:processDebugManifestForPackage (Thread[Execution worker Thread 9,5,main]) started.
+
+> Task :app:processDebugManifestForPackage UP-TO-DATE
+Custom actions are attached to task ':app:processDebugManifestForPackage'.
+Caching disabled for task ':app:processDebugManifestForPackage' because:
+  Build cache is disabled
+Skipping task ':app:processDebugManifestForPackage' as it is up-to-date.
+Resolve mutations for :app:processDebugResources (Thread[Execution worker Thread 9,5,main]) started.
+:app:processDebugResources (Thread[Execution worker Thread 9,5,main]) started.
+
+> Task :app:processDebugResources UP-TO-DATE
+Caching disabled for task ':app:processDebugResources' because:
+  Build cache is disabled
+Skipping task ':app:processDebugResources' as it is up-to-date.
+Resolve mutations for :app:kaptGenerateStubsDebugKotlin (Thread[Execution worker Thread 9,5,main]) started.
+:app:kaptGenerateStubsDebugKotlin (Thread[Execution worker Thread 9,5,main]) started.
+
+> Task :app:kaptGenerateStubsDebugKotlin FAILED
+Adding -Xuse-inline-scopes-numbers Kotlin compiler flag for task :app:compileDebugAndroidTestKotlin
+GradleBuildProject.Builder should not be accessed through AnalyticsConfiguratorService after AnalyticsService is created. Analytics information of this build might be incomplete.
+Caching disabled for task ':app:kaptGenerateStubsDebugKotlin' because:
+  Build cache is disabled
+Task ':app:kaptGenerateStubsDebugKotlin' is not up-to-date because:
+  Task has failed previously.
+The input changes require a full rebuild for incremental task ':app:kaptGenerateStubsDebugKotlin'.
+file or directory '/Users/renzodelgado/Documents/Dev/Personal/Apps/CoderGang/Android/DirectChat/app/src/debug/kotlin', not found
+file or directory '/Users/renzodelgado/Documents/Dev/Personal/Apps/CoderGang/Android/DirectChat/app/src/debug/java', not found
+file or directory '/Users/renzodelgado/Documents/Dev/Personal/Apps/CoderGang/Android/DirectChat/app/src/debug/kotlin', not found
+file or directory '/Users/renzodelgado/Documents/Dev/Personal/Apps/CoderGang/Android/DirectChat/app/src/debug/java', not found
+file or directory '/Users/renzodelgado/Documents/Dev/Personal/Apps/CoderGang/Android/DirectChat/app/src/debug/kotlin', not found
+file or directory '/Users/renzodelgado/Documents/Dev/Personal/Apps/CoderGang/Android/DirectChat/app/src/debug/java', not found
+file or directory '/Users/renzodelgado/Documents/Dev/Personal/Apps/CoderGang/Android/DirectChat/app/src/main/kotlin', not found
+file or directory '/Users/renzodelgado/Documents/Dev/Personal/Apps/CoderGang/Android/DirectChat/app/src/main/kotlin', not found
+file or directory '/Users/renzodelgado/Documents/Dev/Personal/Apps/CoderGang/Android/DirectChat/app/src/main/kotlin', not found
+file or directory '/Users/renzodelgado/Documents/Dev/Personal/Apps/CoderGang/Android/DirectChat/app/src/main/kotlin', not found
+file or directory '/Users/renzodelgado/Documents/Dev/Personal/Apps/CoderGang/Android/DirectChat/app/src/main/kotlin', not found
+file or directory '/Users/renzodelgado/Documents/Dev/Personal/Apps/CoderGang/Android/DirectChat/app/src/main/kotlin', not found
+file or directory '/Users/renzodelgado/Documents/Dev/Personal/Apps/CoderGang/Android/DirectChat/app/src/debug/kotlin', not found
+file or directory '/Users/renzodelgado/Documents/Dev/Personal/Apps/CoderGang/Android/DirectChat/app/src/debug/java', not found
+file or directory '/Users/renzodelgado/Documents/Dev/Personal/Apps/CoderGang/Android/DirectChat/app/src/debug/kotlin', not found
+file or directory '/Users/renzodelgado/Documents/Dev/Personal/Apps/CoderGang/Android/DirectChat/app/src/debug/java', not found
+file or directory '/Users/renzodelgado/Documents/Dev/Personal/Apps/CoderGang/Android/DirectChat/app/src/debug/kotlin', not found
+file or directory '/Users/renzodelgado/Documents/Dev/Personal/Apps/CoderGang/Android/DirectChat/app/src/debug/java', not found
+file or directory '/Users/renzodelgado/Documents/Dev/Personal/Apps/CoderGang/Android/DirectChat/app/src/debug/java', not found
+file or directory '/Users/renzodelgado/Documents/Dev/Personal/Apps/CoderGang/Android/DirectChat/app/src/debug/kotlin', not found
+file or directory '/Users/renzodelgado/Documents/Dev/Personal/Apps/CoderGang/Android/DirectChat/app/src/debug/java', not found
+file or directory '/Users/renzodelgado/Documents/Dev/Personal/Apps/CoderGang/Android/DirectChat/app/src/debug/kotlin', not found
+file or directory '/Users/renzodelgado/Documents/Dev/Personal/Apps/CoderGang/Android/DirectChat/app/src/debug/java', not found
+file or directory '/Users/renzodelgado/Documents/Dev/Personal/Apps/CoderGang/Android/DirectChat/app/src/debug/kotlin', not found
+file or directory '/Users/renzodelgado/Documents/Dev/Personal/Apps/CoderGang/Android/DirectChat/app/src/debug/java', not found
+file or directory '/Users/renzodelgado/Documents/Dev/Personal/Apps/CoderGang/Android/DirectChat/app/src/main/kotlin', not found
+file or directory '/Users/renzodelgado/Documents/Dev/Personal/Apps/CoderGang/Android/DirectChat/app/src/debug/kotlin', not found
+file or directory '/Users/renzodelgado/Documents/Dev/Personal/Apps/CoderGang/Android/DirectChat/app/src/debug/java', not found
+file or directory '/Users/renzodelgado/Documents/Dev/Personal/Apps/CoderGang/Android/DirectChat/app/src/debug/kotlin', not found
+file or directory '/Users/renzodelgado/Documents/Dev/Personal/Apps/CoderGang/Android/DirectChat/app/src/debug/java', not found
+file or directory '/Users/renzodelgado/Documents/Dev/Personal/Apps/CoderGang/Android/DirectChat/app/src/debug/kotlin', not found
+file or directory '/Users/renzodelgado/Documents/Dev/Personal/Apps/CoderGang/Android/DirectChat/app/src/debug/java', not found
+file or directory '/Users/renzodelgado/Documents/Dev/Personal/Apps/CoderGang/Android/DirectChat/app/src/main/kotlin', not found
+file or directory '/Users/renzodelgado/Documents/Dev/Personal/Apps/CoderGang/Android/DirectChat/app/src/main/kotlin', not found
+file or directory '/Users/renzodelgado/Documents/Dev/Personal/Apps/CoderGang/Android/DirectChat/app/src/main/kotlin', not found
+file or directory '/Users/renzodelgado/Documents/Dev/Personal/Apps/CoderGang/Android/DirectChat/app/src/main/kotlin', not found
+file or directory '/Users/renzodelgado/Documents/Dev/Personal/Apps/CoderGang/Android/DirectChat/app/src/main/kotlin', not found
+file or directory '/Users/renzodelgado/Documents/Dev/Personal/Apps/CoderGang/Android/DirectChat/app/src/main/kotlin', not found
+file or directory '/Users/renzodelgado/Documents/Dev/Personal/Apps/CoderGang/Android/DirectChat/app/src/debug/kotlin', not found
+file or directory '/Users/renzodelgado/Documents/Dev/Personal/Apps/CoderGang/Android/DirectChat/app/src/debug/java', not found
+file or directory '/Users/renzodelgado/Documents/Dev/Personal/Apps/CoderGang/Android/DirectChat/app/src/debug/kotlin', not found
+file or directory '/Users/renzodelgado/Documents/Dev/Personal/Apps/CoderGang/Android/DirectChat/app/src/debug/java', not found
+file or directory '/Users/renzodelgado/Documents/Dev/Personal/Apps/CoderGang/Android/DirectChat/app/src/debug/kotlin', not found
+file or directory '/Users/renzodelgado/Documents/Dev/Personal/Apps/CoderGang/Android/DirectChat/app/src/debug/java', not found
+file or directory '/Users/renzodelgado/Documents/Dev/Personal/Apps/CoderGang/Android/DirectChat/app/src/debug/java', not found
+file or directory '/Users/renzodelgado/Documents/Dev/Personal/Apps/CoderGang/Android/DirectChat/app/src/debug/kotlin', not found
+file or directory '/Users/renzodelgado/Documents/Dev/Personal/Apps/CoderGang/Android/DirectChat/app/src/debug/java', not found
+file or directory '/Users/renzodelgado/Documents/Dev/Personal/Apps/CoderGang/Android/DirectChat/app/src/debug/kotlin', not found
+file or directory '/Users/renzodelgado/Documents/Dev/Personal/Apps/CoderGang/Android/DirectChat/app/src/debug/java', not found
+file or directory '/Users/renzodelgado/Documents/Dev/Personal/Apps/CoderGang/Android/DirectChat/app/src/debug/kotlin', not found
+file or directory '/Users/renzodelgado/Documents/Dev/Personal/Apps/CoderGang/Android/DirectChat/app/src/debug/java', not found
+file or directory '/Users/renzodelgado/Documents/Dev/Personal/Apps/CoderGang/Android/DirectChat/app/src/main/kotlin', not found
+file or directory '/Users/renzodelgado/Documents/Dev/Personal/Apps/CoderGang/Android/DirectChat/app/src/main/kotlin', not found
+file or directory '/Users/renzodelgado/Documents/Dev/Personal/Apps/CoderGang/Android/DirectChat/app/src/main/kotlin', not found
+file or directory '/Users/renzodelgado/Documents/Dev/Personal/Apps/CoderGang/Android/DirectChat/app/src/main/kotlin', not found
+file or directory '/Users/renzodelgado/Documents/Dev/Personal/Apps/CoderGang/Android/DirectChat/app/src/main/kotlin', not found
+file or directory '/Users/renzodelgado/Documents/Dev/Personal/Apps/CoderGang/Android/DirectChat/app/src/main/kotlin', not found
+file or directory '/Users/renzodelgado/Documents/Dev/Personal/Apps/CoderGang/Android/DirectChat/app/src/debug/kotlin', not found
+file or directory '/Users/renzodelgado/Documents/Dev/Personal/Apps/CoderGang/Android/DirectChat/app/src/debug/java', not found
+file or directory '/Users/renzodelgado/Documents/Dev/Personal/Apps/CoderGang/Android/DirectChat/app/src/debug/kotlin', not found
+file or directory '/Users/renzodelgado/Documents/Dev/Personal/Apps/CoderGang/Android/DirectChat/app/src/debug/java', not found
+file or directory '/Users/renzodelgado/Documents/Dev/Personal/Apps/CoderGang/Android/DirectChat/app/src/debug/kotlin', not found
+file or directory '/Users/renzodelgado/Documents/Dev/Personal/Apps/CoderGang/Android/DirectChat/app/src/debug/java', not found
+file or directory '/Users/renzodelgado/Documents/Dev/Personal/Apps/CoderGang/Android/DirectChat/app/src/debug/java', not found
+Using Kotlin/JVM incremental compilation
+[KOTLIN] Kotlin compilation 'jdkHome' argument: null
+Options for KOTLIN DAEMON: IncrementalCompilationOptions(super=CompilationOptions(compilerMode=INCREMENTAL_COMPILER, targetPlatform=JVM, reportCategories=[0, 3], reportSeverity=2, requestedCompilationResults=[0], kotlinScriptExtensions=[]), areFileChangesKnown=false, modifiedFiles=null, deletedFiles=null, classpathChanges=NotAvailableForNonIncrementalRun, workingDir=/Users/renzodelgado/Documents/Dev/Personal/Apps/CoderGang/Android/DirectChat/app/build/kotlin/kaptGenerateStubsDebugKotlin/cacheable, multiModuleICSettings=MultiModuleICSettings(buildHistoryFile=/Users/renzodelgado/Documents/Dev/Personal/Apps/CoderGang/Android/DirectChat/app/build/kotlin/kaptGenerateStubsDebugKotlin/local-state/build-history.bin, useModuleDetection=true), usePreciseJavaTracking=true, icFeatures=IncrementalCompilationFeatures(withAbiSnapshot=false, preciseCompilationResultsBackup=true, keepIncrementalCompilationCachesInMemory=true, enableUnsafeIncrementalCompilationForMultiplatform=false), outputFiles=[/Users/renzodelgado/Documents/Dev/Personal/Apps/CoderGang/Android/DirectChat/app/build/tmp/kapt3/incrementalData/debug, /Users/renzodelgado/Documents/Dev/Personal/Apps/CoderGang/Android/DirectChat/app/build/tmp/kapt3/stubs/debug, /Users/renzodelgado/Documents/Dev/Personal/Apps/CoderGang/Android/DirectChat/app/build/kotlin/kaptGenerateStubsDebugKotlin/cacheable, /Users/renzodelgado/Documents/Dev/Personal/Apps/CoderGang/Android/DirectChat/app/build/kotlin/kaptGenerateStubsDebugKotlin/local-state])
+w: Support for language version 2.0+ in kapt is in Alpha and must be enabled explicitly. Falling back to 1.9.
+e: org.jetbrains.kotlin.backend.common.BackendException: Backend Internal error: Exception during IR lowering
+File being compiled: /Users/renzodelgado/Documents/Dev/Personal/Apps/CoderGang/Android/DirectChat/app/src/main/java/com/codergang/directchat/ui/main/ChatTab.kt
+The root cause java.lang.IllegalStateException was thrown at: org.jetbrains.kotlin.serialization.AnnotationSerializer.getAnnotationClassId(AnnotationSerializer.kt:49)
+	at org.jetbrains.kotlin.backend.common.CodegenUtil.reportBackendException(CodegenUtil.kt:253)
+	at org.jetbrains.kotlin.backend.common.CodegenUtil.reportBackendException$default(CodegenUtil.kt:236)
+	at org.jetbrains.kotlin.backend.common.phaser.PerformByIrFilePhase.invokeSequential(performByIrFile.kt:55)
+	at org.jetbrains.kotlin.backend.common.phaser.PerformByIrFilePhase.invoke(performByIrFile.kt:42)
+	at org.jetbrains.kotlin.backend.common.phaser.PerformByIrFilePhase.invoke(performByIrFile.kt:28)
+	at org.jetbrains.kotlin.backend.common.phaser.NamedCompilerPhase.phaseBody(CompilerPhase.kt:166)
+	at org.jetbrains.kotlin.backend.common.phaser.AbstractNamedCompilerPhase.invoke(CompilerPhase.kt:113)
+	at org.jetbrains.kotlin.backend.common.phaser.CompositePhase.invoke(PhaseBuilders.kt:27)
+	at org.jetbrains.kotlin.backend.common.phaser.CompositePhase.invoke(PhaseBuilders.kt:14)
+	at org.jetbrains.kotlin.backend.common.phaser.NamedCompilerPhase.phaseBody(CompilerPhase.kt:166)
+	at org.jetbrains.kotlin.backend.common.phaser.AbstractNamedCompilerPhase.invoke(CompilerPhase.kt:113)
+	at org.jetbrains.kotlin.backend.common.phaser.CompilerPhaseKt.invokeToplevel(CompilerPhase.kt:62)
+	at org.jetbrains.kotlin.backend.jvm.JvmIrCodegenFactory.invokeCodegen(JvmIrCodegenFactory.kt:371)
+	at org.jetbrains.kotlin.codegen.CodegenFactory.generateModule(CodegenFactory.kt:47)
+	at org.jetbrains.kotlin.codegen.KotlinCodegenFacade.compileCorrectFiles(KotlinCodegenFacade.java:45)
+	at org.jetbrains.kotlin.kapt3.AbstractKapt3Extension.contextForStubGeneration(Kapt3Extension.kt:253)
+	at org.jetbrains.kotlin.kapt3.AbstractKapt3Extension.analysisCompleted(Kapt3Extension.kt:149)
+	at org.jetbrains.kotlin.kapt3.ClasspathBasedKapt3Extension.analysisCompleted(Kapt3Extension.kt:79)
+	at org.jetbrains.kotlin.cli.jvm.compiler.TopDownAnalyzerFacadeForJVM.analyzeFilesWithJavaIntegration$invokeExtensionsOnAnalysisComplete(TopDownAnalyzerFacadeForJVM.kt:104)
+	at org.jetbrains.kotlin.cli.jvm.compiler.TopDownAnalyzerFacadeForJVM.analyzeFilesWithJavaIntegration(TopDownAnalyzerFacadeForJVM.kt:114)
+	at org.jetbrains.kotlin.cli.jvm.compiler.TopDownAnalyzerFacadeForJVM.analyzeFilesWithJavaIntegration$default(TopDownAnalyzerFacadeForJVM.kt:75)
+	at org.jetbrains.kotlin.cli.jvm.compiler.KotlinToJVMBytecodeCompiler.analyze$lambda$9(KotlinToJVMBytecodeCompiler.kt:356)
+	at org.jetbrains.kotlin.cli.common.messages.AnalyzerWithCompilerReport.analyzeAndReport(AnalyzerWithCompilerReport.kt:112)
+	at org.jetbrains.kotlin.cli.jvm.compiler.KotlinToJVMBytecodeCompiler.analyze(KotlinToJVMBytecodeCompiler.kt:347)
+	at org.jetbrains.kotlin.cli.jvm.compiler.KotlinToJVMBytecodeCompiler.runFrontendAndGenerateIrUsingClassicFrontend(KotlinToJVMBytecodeCompiler.kt:177)
+	at org.jetbrains.kotlin.cli.jvm.compiler.KotlinToJVMBytecodeCompiler.compileModules$cli(KotlinToJVMBytecodeCompiler.kt:102)
+	at org.jetbrains.kotlin.cli.jvm.K2JVMCompiler.doExecute(K2JVMCompiler.kt:169)
+	at org.jetbrains.kotlin.cli.jvm.K2JVMCompiler.doExecute(K2JVMCompiler.kt:43)
+	at org.jetbrains.kotlin.cli.common.CLICompiler.execImpl(CLICompiler.kt:102)
+	at org.jetbrains.kotlin.cli.common.CLICompiler.exec(CLICompiler.kt:316)
+	at org.jetbrains.kotlin.incremental.IncrementalJvmCompilerRunner.runCompiler(IncrementalJvmCompilerRunner.kt:464)
+	at org.jetbrains.kotlin.incremental.IncrementalJvmCompilerRunner.runCompiler(IncrementalJvmCompilerRunner.kt:73)
+	at org.jetbrains.kotlin.incremental.IncrementalCompilerRunner.doCompile(IncrementalCompilerRunner.kt:506)
+	at org.jetbrains.kotlin.incremental.IncrementalCompilerRunner.compileImpl(IncrementalCompilerRunner.kt:423)
+	at org.jetbrains.kotlin.incremental.IncrementalCompilerRunner.compileNonIncrementally(IncrementalCompilerRunner.kt:301)
+	at org.jetbrains.kotlin.incremental.IncrementalCompilerRunner.compile(IncrementalCompilerRunner.kt:129)
+	at org.jetbrains.kotlin.daemon.CompileServiceImplBase.execIncrementalCompiler(CompileServiceImpl.kt:674)
+	at org.jetbrains.kotlin.daemon.CompileServiceImplBase.access$execIncrementalCompiler(CompileServiceImpl.kt:91)
+	at org.jetbrains.kotlin.daemon.CompileServiceImpl.compile(CompileServiceImpl.kt:1659)
+	at jdk.internal.reflect.GeneratedMethodAccessor54.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at java.rmi/sun.rmi.server.UnicastServerRef.dispatch(UnicastServerRef.java:360)
+	at java.rmi/sun.rmi.transport.Transport$1.run(Transport.java:200)
+	at java.rmi/sun.rmi.transport.Transport$1.run(Transport.java:197)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:712)
+	at java.rmi/sun.rmi.transport.Transport.serviceCall(Transport.java:196)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport.handleMessages(TCPTransport.java:587)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run0(TCPTransport.java:828)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.lambda$run$0(TCPTransport.java:705)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:399)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run(TCPTransport.java:704)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+Caused by: java.lang.IllegalStateException: Unresolved annotation type: [Error type: Unresolved type for Composable] at /Users/renzodelgado/Documents/Dev/Personal/Apps/CoderGang/Android/DirectChat/app/src/main/java/com/codergang/directchat/ui/main/ChatTab.kt
+	at org.jetbrains.kotlin.serialization.AnnotationSerializer.getAnnotationClassId(AnnotationSerializer.kt:49)
+	at org.jetbrains.kotlin.serialization.AnnotationSerializer.serializeAnnotation(AnnotationSerializer.kt:35)
+	at org.jetbrains.kotlin.codegen.serialization.JvmSerializerExtension.serializeType(JvmSerializerExtension.kt:152)
+	at org.jetbrains.kotlin.serialization.DescriptorSerializer.type$serialization(DescriptorSerializer.kt:616)
+	at org.jetbrains.kotlin.serialization.DescriptorSerializer.valueParameter(DescriptorSerializer.kt:500)
+	at org.jetbrains.kotlin.serialization.DescriptorSerializer.functionProto(DescriptorSerializer.kt:370)
+	at org.jetbrains.kotlin.serialization.DescriptorSerializer.packagePartProto(DescriptorSerializer.kt:676)
+	at org.jetbrains.kotlin.backend.jvm.metadata.DescriptorMetadataSerializer.serialize(DescriptorMetadataSerializer.kt:72)
+	at org.jetbrains.kotlin.backend.jvm.codegen.ClassCodegen.generateKotlinMetadataAnnotation$lambda$16(ClassCodegen.kt:319)
+	at org.jetbrains.kotlin.codegen.WriteAnnotationUtilKt.writeKotlinMetadata(writeAnnotationUtil.kt:48)
+	at org.jetbrains.kotlin.backend.jvm.codegen.ClassCodegen.generateKotlinMetadataAnnotation(ClassCodegen.kt:317)
+	at org.jetbrains.kotlin.backend.jvm.codegen.ClassCodegen.generateAnnotations(ClassCodegen.kt:272)
+	at org.jetbrains.kotlin.backend.jvm.codegen.ClassCodegen.generate(ClassCodegen.kt:186)
+	at org.jetbrains.kotlin.backend.jvm.FileCodegen.lower(JvmPhases.kt:39)
+	at org.jetbrains.kotlin.backend.common.phaser.PhaseFactoriesKt.createFilePhase$lambda$4(PhaseFactories.kt:71)
+	at org.jetbrains.kotlin.backend.common.phaser.PhaseBuildersKt$createSimpleNamedCompilerPhase$1.phaseBody(PhaseBuilders.kt:69)
+	at org.jetbrains.kotlin.backend.common.phaser.SimpleNamedCompilerPhase.phaseBody(CompilerPhase.kt:226)
+	at org.jetbrains.kotlin.backend.common.phaser.AbstractNamedCompilerPhase.invoke(CompilerPhase.kt:113)
+	at org.jetbrains.kotlin.backend.common.phaser.PerformByIrFilePhase.invokeSequential(performByIrFile.kt:52)
+	... 52 more
+
+Finished executing kotlin compiler using DAEMON strategy
+
+[Incubating] Problems report is available at: file:///Users/renzodelgado/Documents/Dev/Personal/Apps/CoderGang/Android/DirectChat/build/reports/problems/problems-report.html
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':app:kaptGenerateStubsDebugKotlin'.
+> A failure occurred while executing org.jetbrains.kotlin.compilerRunner.GradleCompilerRunnerWithWorkers$GradleKotlinCompilerWorkAction
+   > Internal compiler error. See log for more details
+
+* Try:
+> Run with --stacktrace option to get the stack trace.
+> Run with --debug option to get more log output.
+> Run with --scan to get full insights.
+> Get more help at https://help.gradle.org.
+
+Deprecated Gradle features were used in this build, making it incompatible with Gradle 9.0.
+
+You can use '--warning-mode all' to show the individual deprecation warnings and determine if they come from your own scripts or plugins.
+
+For more on this, please refer to https://docs.gradle.org/8.13/userguide/command_line_interface.html#sec:command_line_warnings in the Gradle documentation.
+
+BUILD FAILED in 1s
+15 actionable tasks: 1 executed, 14 up-to-date
+Watched directory hierarchies: [/Users/renzodelgado/Documents/Dev/Personal/Apps/CoderGang/Android/DirectChat]
