@@ -22,10 +22,10 @@
             <InsightsFilterSettings>
               <option name="connection">
                 <ConnectionSetting>
-                  <option name="appId" value="PLACEHOLDER" />
-                  <option name="mobileSdkAppId" value="" />
-                  <option name="projectId" value="" />
-                  <option name="projectNumber" value="" />
+                  <option name="appId" value="com.codergang.chatdirecto" />
+                  <option name="mobileSdkAppId" value="1:633869157322:android:c62d081ae2bf4a2031c533" />
+                  <option name="projectId" value="direct-chat-b259a" />
+                  <option name="projectNumber" value="633869157322" />
                 </ConnectionSetting>
               </option>
               <option name="signal" value="SIGNAL_UNSPECIFIED" />
