@@ -5,7 +5,6 @@ import android.widget.Toast
 import androidx.activity.compose.setContent
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.repeatOnLifecycle
@@ -33,7 +32,6 @@ class MainActivity : AppCompatActivity() {
     private lateinit var interstitialAdManager: InterstitialAdManager
 
     override fun onCreate(savedInstanceState: Bundle?) {
-        installSplashScreen()
         super.onCreate(savedInstanceState)
 
         val persistedProState = MonetizationPreferences.isAdsRemoved(this)
