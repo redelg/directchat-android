@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-05-01T23:43:59.019Z",
+  "generatedAt": "2026-05-06T02:26:50.859Z",
   "dryRun": false,
   "packageName": "com.codergang.chatdirecto",
   "inputFile": "/Users/renzodelgado/Documents/Dev/Personal/Apps/CoderGang/Android/DirectChat/docs/play-listings.json",
-  "editId": "10262986841333252591",
+  "editId": "17369626114363422782",
   "listingsPlanned": 3,
   "listingsUpdated": 3,
   "changedLanguages": [
@@ -11,5 +11,5 @@
     "en-US",
     "pt-BR"
   ],
-  "changesNotSentForReview": true
+  "changesNotSentForReview": false
 }
