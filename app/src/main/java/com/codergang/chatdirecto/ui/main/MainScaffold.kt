@@ -56,13 +56,14 @@ private fun MainTopBar(actions: @Composable () -> Unit) {
             Text(
                 text = stringResource(R.string.app_name),
                 fontFamily = AvenirFamily,
-                fontWeight = FontWeight.SemiBold,
-                fontSize = 20.sp
+                fontWeight = FontWeight.Bold,
+                fontSize = 19.sp,
+                letterSpacing = 0.2.sp
             )
         },
         actions = { actions() },
         colors = TopAppBarDefaults.topAppBarColors(
-            containerColor = PrimaryGreen,
+            containerColor = BrandPrimary,
             titleContentColor = ComposeColor.White,
             actionIconContentColor = ComposeColor.White
         )
@@ -76,7 +77,7 @@ private fun MainBottomNavigation(
 ) {
     NavigationBar(
         containerColor = ComposeColor.White,
-        tonalElevation = 4.dp
+        tonalElevation = 6.dp
     ) {
         MainTab.entries.forEach { tab ->
             NavigationBarItem(
@@ -86,22 +87,23 @@ private fun MainBottomNavigation(
                     Icon(
                         painter = painterResource(id = tab.iconRes),
                         contentDescription = null,
-                        tint = if (selectedTab == tab) PrimaryGreenDark else ComposeColor(0xFF7A7A7A)
+                        tint = if (selectedTab == tab) BrandPrimary else ComposeColor(0xFF94A3B8)
                     )
                 },
                 label = {
                     Text(
                         text = stringResource(tab.labelRes),
                         fontFamily = AvenirFamily,
+                        fontWeight = if (selectedTab == tab) FontWeight.SemiBold else FontWeight.Normal,
                         fontSize = 11.sp
                     )
                 },
                 colors = NavigationBarItemDefaults.colors(
-                    selectedIconColor = PrimaryGreenDark,
-                    selectedTextColor = PrimaryGreenDark,
-                    indicatorColor = PrimaryGreenLight.copy(alpha = 0.35f),
-                    unselectedIconColor = ComposeColor(0xFF7A7A7A),
-                    unselectedTextColor = ComposeColor(0xFF7A7A7A)
+                    selectedIconColor = BrandPrimary,
+                    selectedTextColor = BrandPrimary,
+                    indicatorColor = BrandLavenderBg,
+                    unselectedIconColor = ComposeColor(0xFF94A3B8),
+                    unselectedTextColor = ComposeColor(0xFF94A3B8)
                 )
             )
         }

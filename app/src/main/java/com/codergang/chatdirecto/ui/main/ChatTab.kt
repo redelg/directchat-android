@@ -176,9 +176,9 @@ internal fun ChatTab(
 
         ElevatedCard(
             modifier = Modifier.fillMaxWidth(),
-            elevation = CardDefaults.elevatedCardElevation(defaultElevation = 3.dp),
+            elevation = CardDefaults.elevatedCardElevation(defaultElevation = 2.dp),
             colors = CardDefaults.elevatedCardColors(
-                containerColor = ComposeColor(0xFFF8FCF9)
+                containerColor = ComposeColor.White
             ),
             shape = RoundedCornerShape(24.dp)
         ) {
