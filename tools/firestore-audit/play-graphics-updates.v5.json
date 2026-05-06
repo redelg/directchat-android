@@ -1,0 +1,76 @@
+{
+  "updates": [
+    {
+      "language": "es-419",
+      "imageType": "icon",
+      "replace": true,
+      "files": ["tools/store-listing/play_icon_512.png"]
+    },
+    {
+      "language": "en-US",
+      "imageType": "icon",
+      "replace": true,
+      "files": ["tools/store-listing/play_icon_512.png"]
+    },
+    {
+      "language": "pt-BR",
+      "imageType": "icon",
+      "replace": true,
+      "files": ["tools/store-listing/play_icon_512.png"]
+    },
+    {
+      "language": "es-419",
+      "imageType": "featureGraphic",
+      "replace": true,
+      "files": ["tools/store-listing/feature_graphic_1024x500.png"]
+    },
+    {
+      "language": "en-US",
+      "imageType": "featureGraphic",
+      "replace": true,
+      "files": ["tools/store-listing/feature_graphic_1024x500.png"]
+    },
+    {
+      "language": "pt-BR",
+      "imageType": "featureGraphic",
+      "replace": true,
+      "files": ["tools/store-listing/feature_graphic_1024x500.png"]
+    },
+    {
+      "language": "es-419",
+      "imageType": "phoneScreenshots",
+      "replace": true,
+      "files": [
+        "tools/store-listing/screenshots/03_screenshot_es_1_hero.png",
+        "tools/store-listing/screenshots/03_screenshot_es_2_templates.png",
+        "tools/store-listing/screenshots/03_screenshot_es_3_history.png",
+        "tools/store-listing/screenshots/03_screenshot_es_4_qr.png",
+        "tools/store-listing/screenshots/03_screenshot_es_5_pro.png"
+      ]
+    },
+    {
+      "language": "en-US",
+      "imageType": "phoneScreenshots",
+      "replace": true,
+      "files": [
+        "tools/store-listing/screenshots/03_screenshot_en_1_hero.png",
+        "tools/store-listing/screenshots/03_screenshot_en_2_templates.png",
+        "tools/store-listing/screenshots/03_screenshot_en_3_history.png",
+        "tools/store-listing/screenshots/03_screenshot_en_4_qr.png",
+        "tools/store-listing/screenshots/03_screenshot_en_5_pro.png"
+      ]
+    },
+    {
+      "language": "pt-BR",
+      "imageType": "phoneScreenshots",
+      "replace": true,
+      "files": [
+        "tools/store-listing/screenshots/03_screenshot_pt_1_hero.png",
+        "tools/store-listing/screenshots/03_screenshot_pt_2_templates.png",
+        "tools/store-listing/screenshots/03_screenshot_pt_3_history.png",
+        "tools/store-listing/screenshots/03_screenshot_pt_4_qr.png",
+        "tools/store-listing/screenshots/03_screenshot_pt_5_pro.png"
+      ]
+    }
+  ]
+}
