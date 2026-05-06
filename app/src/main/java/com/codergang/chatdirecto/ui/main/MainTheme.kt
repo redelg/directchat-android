@@ -9,9 +9,19 @@ import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
 import com.codergang.chatdirecto.R
 
-internal val PrimaryGreen = ComposeColor(0xFF29AA6F)
-internal val PrimaryGreenDark = ComposeColor(0xFF008580)
-internal val PrimaryGreenLight = ComposeColor(0xFF46F696)
+// Mensaji brand palette
+internal val BrandPrimary = ComposeColor(0xFF6C5CE7)
+internal val BrandPrimaryDark = ComposeColor(0xFF4834D4)
+internal val BrandAccent = ComposeColor(0xFFFF6B68)
+internal val BrandSurface = ComposeColor(0xFFF8FAFC)
+internal val BrandLavenderBg = ComposeColor(0xFFF2F0FF)
+internal val BrandText = ComposeColor(0xFF0F172A)
+internal val BrandBorder = ComposeColor(0xFFE2E8F0)
+
+// Legacy aliases — kept so existing call sites compile until they're migrated
+internal val PrimaryGreen = BrandPrimary
+internal val PrimaryGreenDark = BrandPrimaryDark
+internal val PrimaryGreenLight = BrandAccent
 
 internal val AvenirFamily = FontFamily(
     Font(R.font.avenir, FontWeight.Normal),
@@ -22,13 +32,16 @@ internal val AvenirFamily = FontFamily(
 @Composable
 internal fun DirectChatTheme(content: @Composable () -> Unit) {
     val colorScheme = lightColorScheme(
-        primary = PrimaryGreen,
-        secondary = PrimaryGreenDark,
-        tertiary = PrimaryGreenLight,
-        background = ComposeColor.White,
+        primary = BrandPrimary,
+        secondary = BrandPrimaryDark,
+        tertiary = BrandAccent,
+        background = BrandSurface,
         surface = ComposeColor.White,
         onPrimary = ComposeColor.White,
-        onSecondary = ComposeColor.White
+        onSecondary = ComposeColor.White,
+        onBackground = BrandText,
+        onSurface = BrandText,
+        outline = BrandBorder
     )
 
     MaterialTheme(

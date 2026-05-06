@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">TapChat</string>
+    <string name="app_name">Mensaji</string>
+    <string name="text_legal_disclaimer">App independente, não afiliado à WhatsApp Inc. Usa o esquema oficial wa.me para abrir conversas.</string>
     <string name="text_home">Início</string>
     <string name="text_chat">Iniciar Chat</string>
     <string name="text_history">Histórico</string>
