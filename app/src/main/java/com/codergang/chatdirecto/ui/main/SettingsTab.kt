@@ -7,6 +7,7 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
@@ -87,11 +88,21 @@ internal fun SettingsTab(
                 fontWeight = FontWeight.Bold
             )
         }
+        item {
+            Image(
+                painter = painterResource(R.drawable.wordmark_lockup),
+                contentDescription = stringResource(R.string.app_name),
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .height(72.dp)
+                    .padding(vertical = 8.dp)
+            )
+        }
         item { SettingsRow(text = stringResource(R.string.text_privacy_policy), onClick = onPrivacyPolicy) }
         item { SettingsRow(text = stringResource(R.string.text_terms_and_conditions), onClick = onTerms) }
         item {
             Text(
-                text = stringResource(R.string.text_brand_disclaimer),
+                text = stringResource(R.string.text_legal_disclaimer),
                 fontFamily = AvenirFamily,
                 fontSize = 13.sp,
                 color = ComposeColor(0xFF555555),

@@ -123,6 +123,18 @@ internal fun OnboardingScreen(
             }
         }
 
+        Text(
+            text = stringResource(R.string.text_legal_disclaimer),
+            modifier = Modifier
+                .align(Alignment.BottomCenter)
+                .padding(horizontal = 24.dp, vertical = 60.dp),
+            fontFamily = AvenirFamily,
+            fontSize = 11.sp,
+            color = ComposeColor(0xFF777777),
+            lineHeight = 14.sp,
+            textAlign = androidx.compose.ui.text.style.TextAlign.Center
+        )
+
         Row(
             modifier = Modifier
                 .align(Alignment.BottomCenter)
