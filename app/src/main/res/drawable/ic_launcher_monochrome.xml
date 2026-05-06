@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Mensaji adaptive icon — monochrome layer (Android 13+ themed icons)
+  Single-color silhouette of the Nodes mark. System tints this at runtime,
+  so all paths must be white (#FFFFFF). No coral, no fills besides white.
+
+  Geometry matches foreground but receiver is a ring (not a fill) so the
+  silhouette stays distinguishable when monochromed.
+
+  Drop in: app/src/main/res/drawable/ic_launcher_monochrome.xml
+-->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108"
+    android:tint="?attr/colorControlNormal">
+
+    <!-- connector -->
+    <path
+        android:pathData="M 52,54 L 56,54"
+        android:strokeColor="#FFFFFF"
+        android:strokeWidth="4.5"
+        android:strokeLineCap="round" />
+
+    <!-- sender: solid -->
+    <path
+        android:pathData="M 30,54 a 12,12 0 1,0 24,0 a 12,12 0 1,0 -24,0 Z"
+        android:fillColor="#FFFFFF" />
+
+    <!-- receiver: ring (4.5 stroke) -->
+    <path
+        android:pathData="M 54,54 a 12,12 0 1,0 24,0 a 12,12 0 1,0 -24,0 Z"
+        android:fillColor="#00000000"
+        android:strokeColor="#FFFFFF"
+        android:strokeWidth="4.5" />
+</vector>

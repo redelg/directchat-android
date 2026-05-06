@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Mensaji adaptive icon — foreground layer
+  viewBox 108×108 (Android adaptive icon spec)
+  Artwork lives inside the central 66% safe zone (18 → 90).
+
+  Geometry (locked):
+    sender   : solid white circle  cx=42  cy=54  r=12
+    receiver : solid coral circle  cx=66  cy=54  r=12
+    connector: white path           x=52→56  stroke=4.5  alpha=0.7
+
+  Drop in: app/src/main/res/drawable/ic_launcher_foreground.xml
+-->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+
+    <!-- connector (drawn first so it sits behind nodes) -->
+    <path
+        android:pathData="M 52,54 L 56,54"
+        android:strokeColor="#FFFFFF"
+        android:strokeWidth="4.5"
+        android:strokeLineCap="round"
+        android:strokeAlpha="0.7" />
+
+    <!-- sender: solid white  cx=42 cy=54 r=12 -->
+    <path
+        android:pathData="M 30,54 a 12,12 0 1,0 24,0 a 12,12 0 1,0 -24,0 Z"
+        android:fillColor="#FFFFFF" />
+
+    <!-- receiver: solid coral cx=66 cy=54 r=12 -->
+    <path
+        android:pathData="M 54,54 a 12,12 0 1,0 24,0 a 12,12 0 1,0 -24,0 Z"
+        android:fillColor="#FF6B68" />
+</vector>
