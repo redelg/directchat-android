@@ -113,10 +113,10 @@ internal fun copyToClipboard(context: Context, text: String) {
 internal fun saveBitmapToGallery(context: Context, bitmap: Bitmap): Boolean {
     return try {
         val values = ContentValues().apply {
-            put(MediaStore.Images.Media.DISPLAY_NAME, "TapChat_QR_${System.currentTimeMillis()}.png")
+            put(MediaStore.Images.Media.DISPLAY_NAME, "Mensaji_QR_${System.currentTimeMillis()}.png")
             put(MediaStore.Images.Media.MIME_TYPE, "image/png")
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
-                put(MediaStore.Images.Media.RELATIVE_PATH, Environment.DIRECTORY_PICTURES + "/TapChat")
+                put(MediaStore.Images.Media.RELATIVE_PATH, Environment.DIRECTORY_PICTURES + "/Mensaji")
             }
         }
         val uri = context.contentResolver.insert(

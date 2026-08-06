@@ -9,9 +9,9 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalConfiguration
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.viewinterop.AndroidView
+import com.google.android.gms.ads.AdRequest
 import com.google.android.gms.ads.AdSize
-import com.google.android.gms.ads.admanager.AdManagerAdRequest
-import com.google.android.gms.ads.admanager.AdManagerAdView
+import com.google.android.gms.ads.AdView
 
 @Composable
 internal fun BannerAd(
@@ -25,11 +25,11 @@ internal fun BannerAd(
     val adWidth = (screenWidthDp - 24).coerceAtLeast(300)
 
     val adView = remember(adUnitId, adWidth) {
-        AdManagerAdView(context).apply {
+        AdView(context).apply {
             @Suppress("DEPRECATION")
             setAdSize(AdSize.getCurrentOrientationAnchoredAdaptiveBannerAdSize(context, adWidth))
             this.adUnitId = adUnitId
-            loadAd(AdManagerAdRequest.Builder().build())
+            loadAd(AdRequest.Builder().build())
         }
     }
 

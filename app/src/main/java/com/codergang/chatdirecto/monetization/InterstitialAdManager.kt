@@ -2,30 +2,30 @@ package com.codergang.chatdirecto.monetization
 
 import android.app.Activity
 import android.content.Context
+import com.google.android.gms.ads.AdRequest
 import com.google.android.gms.ads.FullScreenContentCallback
 import com.google.android.gms.ads.LoadAdError
-import com.google.android.gms.ads.admanager.AdManagerAdRequest
-import com.google.android.gms.ads.admanager.AdManagerInterstitialAd
-import com.google.android.gms.ads.admanager.AdManagerInterstitialAdLoadCallback
+import com.google.android.gms.ads.interstitial.InterstitialAd
+import com.google.android.gms.ads.interstitial.InterstitialAdLoadCallback
 
 class InterstitialAdManager(
     private val context: Context,
     private val adUnitId: String,
     private val showEveryN: Int = 3
 ) {
-    private var interstitialAd: AdManagerInterstitialAd? = null
+    private var interstitialAd: InterstitialAd? = null
     private var isLoading = false
     private var chatCount = 0
 
     fun preload() {
         if (isLoading || interstitialAd != null) return
         isLoading = true
-        AdManagerInterstitialAd.load(
+        InterstitialAd.load(
             context,
             adUnitId,
-            AdManagerAdRequest.Builder().build(),
-            object : AdManagerInterstitialAdLoadCallback() {
-                override fun onAdLoaded(ad: AdManagerInterstitialAd) {
+            AdRequest.Builder().build(),
+            object : InterstitialAdLoadCallback() {
+                override fun onAdLoaded(ad: InterstitialAd) {
                     interstitialAd = ad
                     isLoading = false
                 }

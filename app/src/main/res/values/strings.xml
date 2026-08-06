@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">TapChat</string>
+    <string name="app_name">Mensaji</string>
     <string name="text_home">Home</string>
     <string name="text_chat">Start Chat</string>
     <string name="text_history">History</string>
@@ -120,15 +120,15 @@
     <string name="text_category_pro_only">This category is a Pro feature. Upgrade to unlock it.</string>
     <string name="text_search_messages">Search messages</string>
 
-    <!--  ADS (ad.plus — Google Ad Manager unit paths)  -->
-    <string name="ads_app_id" translatable="false">ca-app-pub-9807820378544612~8912299886</string>
-    <string name="banner_chat" translatable="false">/21849154601,23350013077/Ad.Plus-APP-Banner</string>
-    <string name="banner_history" translatable="false">/21849154601,23350013077/Ad.Plus-APP-Banner</string>
-    <string name="ad_open_app" translatable="false">/21849154601,23350013077/Ad.Plus-APP-APPOpen</string>
-    <string name="banner_qr" translatable="false">/21849154601,23350013077/Ad.Plus-APP-Banner</string>
-    <string name="banner_link" translatable="false">/21849154601,23350013077/Ad.Plus-APP-Banner</string>
-    <string name="ad_interstitial_chat" translatable="false">/21849154601,23350013077/Ad.Plus-APP-Interstitial</string>
-    <string name="ad_rewarded_unlock" translatable="false">/21849154601,23350013077/Ad.Plus-APP-Rewarded</string>
+    <!--  ADS  -->
+    <string name="ads_app_id" translatable="false">ca-app-pub-7110624018386566~4305730496</string>
+    <string name="banner_chat" translatable="false">ca-app-pub-7110624018386566/8827569866</string>
+    <string name="banner_history" translatable="false">ca-app-pub-7110624018386566/7859555823</string>
+    <string name="ad_open_app" translatable="false">ca-app-pub-7110624018386566/2361253921</string>
+    <string name="banner_qr" translatable="false">ca-app-pub-7110624018386566/3334821602</string>
+    <string name="banner_link" translatable="false">ca-app-pub-7110624018386566/3589312363</string>
+    <string name="ad_interstitial_chat" translatable="false">ca-app-pub-7110624018386566/8399446028</string>
+    <string name="ad_rewarded_unlock" translatable="false">ca-app-pub-7110624018386566/9044714790</string>
 
     <!--  TEST ADS  -->
 <!--    <string name="ads_app_id" translatable="false">ca-app-pub-3940256099942544~3347511713</string>-->
