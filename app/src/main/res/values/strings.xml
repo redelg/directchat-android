@@ -121,7 +121,7 @@
     <string name="text_search_messages">Search messages</string>
 
     <!--  ADS  -->
-    <string name="ads_app_id" translatable="false">ca-app-pub-7110624018386566~4305730496</string>
+    <string name="ads_app_id" translatable="false">ca-app-pub-7110624018386566~7939446878</string>
     <string name="banner_chat" translatable="false">ca-app-pub-7110624018386566/8827569866</string>
     <string name="banner_history" translatable="false">ca-app-pub-7110624018386566/7859555823</string>
     <string name="ad_open_app" translatable="false">ca-app-pub-7110624018386566/2361253921</string>
