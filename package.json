@@ -1,4 +1,14 @@
 {
+  "name": "mensaji-tools",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "publish-play-bundle": "node tools/firestore-audit/publish-play-bundle.mjs",
+    "upsert-play-listings": "node tools/firestore-audit/upsert-play-listings.mjs",
+    "upsert-play-graphics": "node tools/firestore-audit/upsert-play-graphics.mjs",
+    "audit-play-graphics": "node tools/firestore-audit/audit-play-graphics.mjs",
+    "promote-track": "node tools/firestore-audit/promote-track.mjs"
+  },
   "devDependencies": {
     "google-auth-library": "^10.6.1"
   }

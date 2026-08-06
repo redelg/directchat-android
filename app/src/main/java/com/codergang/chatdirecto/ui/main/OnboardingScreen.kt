@@ -51,17 +51,17 @@ internal fun OnboardingScreen(
             OnboardingPage(
                 titleRes = R.string.text_without_saving_contact,
                 bodyRes = R.string.text_no_need_to_save,
-                iconRes = R.drawable.ic_step_one
+                iconRes = R.drawable.onboarding_no_save
             ),
             OnboardingPage(
                 titleRes = R.string.text_direct_chat,
                 bodyRes = R.string.text_send_messages_and_media,
-                iconRes = R.drawable.ic_step_two
+                iconRes = R.drawable.onboarding_templates
             ),
             OnboardingPage(
                 titleRes = R.string.text_quick_and_neasy_to_use,
                 bodyRes = R.string.text_start_sending_messages_in_an_easy_and_simple_way,
-                iconRes = R.drawable.ic_step_three
+                iconRes = R.drawable.onboarding_qr
             )
         )
     }
@@ -122,6 +122,18 @@ internal fun OnboardingScreen(
                 }
             }
         }
+
+        Text(
+            text = stringResource(R.string.text_legal_disclaimer),
+            modifier = Modifier
+                .align(Alignment.BottomCenter)
+                .padding(horizontal = 24.dp, vertical = 60.dp),
+            fontFamily = AvenirFamily,
+            fontSize = 11.sp,
+            color = ComposeColor(0xFF777777),
+            lineHeight = 14.sp,
+            textAlign = androidx.compose.ui.text.style.TextAlign.Center
+        )
 
         Row(
             modifier = Modifier

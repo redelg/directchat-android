@@ -18,6 +18,7 @@ import androidx.compose.material.icons.outlined.Search
 import androidx.compose.material.icons.outlined.Share
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.ElevatedCard
+import androidx.compose.foundation.Image
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.Text
@@ -87,11 +88,10 @@ internal fun HistoryTab(
                 horizontalAlignment = Alignment.CenterHorizontally
             ) {
                 Spacer(modifier = Modifier.weight(1f))
-                Icon(
-                    painter = painterResource(R.drawable.ic_recall),
+                Image(
+                    painter = painterResource(R.drawable.empty_no_chats),
                     contentDescription = null,
-                    tint = ComposeColor(0xFF777777),
-                    modifier = Modifier.size(80.dp)
+                    modifier = Modifier.size(220.dp)
                 )
                 Spacer(modifier = Modifier.height(8.dp))
                 Text(text = stringResource(R.string.text_no_history), fontFamily = AvenirFamily)

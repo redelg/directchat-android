@@ -1,0 +1,93 @@
+{
+  "generatedAt": "2026-05-06T02:29:02.547Z",
+  "packageName": "com.codergang.chatdirecto",
+  "editId": "07827714193120504755",
+  "updatesCount": 9,
+  "changed": [
+    {
+      "language": "es-419",
+      "imageType": "icon",
+      "files": [
+        "/Users/renzodelgado/Documents/Dev/Personal/Apps/CoderGang/Android/DirectChat/tools/store-listing/play_icon_512.png"
+      ],
+      "replace": true
+    },
+    {
+      "language": "en-US",
+      "imageType": "icon",
+      "files": [
+        "/Users/renzodelgado/Documents/Dev/Personal/Apps/CoderGang/Android/DirectChat/tools/store-listing/play_icon_512.png"
+      ],
+      "replace": true
+    },
+    {
+      "language": "pt-BR",
+      "imageType": "icon",
+      "files": [
+        "/Users/renzodelgado/Documents/Dev/Personal/Apps/CoderGang/Android/DirectChat/tools/store-listing/play_icon_512.png"
+      ],
+      "replace": true
+    },
+    {
+      "language": "es-419",
+      "imageType": "featureGraphic",
+      "files": [
+        "/Users/renzodelgado/Documents/Dev/Personal/Apps/CoderGang/Android/DirectChat/tools/store-listing/feature_graphic_1024x500.png"
+      ],
+      "replace": true
+    },
+    {
+      "language": "en-US",
+      "imageType": "featureGraphic",
+      "files": [
+        "/Users/renzodelgado/Documents/Dev/Personal/Apps/CoderGang/Android/DirectChat/tools/store-listing/feature_graphic_1024x500.png"
+      ],
+      "replace": true
+    },
+    {
+      "language": "pt-BR",
+      "imageType": "featureGraphic",
+      "files": [
+        "/Users/renzodelgado/Documents/Dev/Personal/Apps/CoderGang/Android/DirectChat/tools/store-listing/feature_graphic_1024x500.png"
+      ],
+      "replace": true
+    },
+    {
+      "language": "es-419",
+      "imageType": "phoneScreenshots",
+      "files": [
+        "/Users/renzodelgado/Documents/Dev/Personal/Apps/CoderGang/Android/DirectChat/tools/store-listing/screenshots/03_screenshot_es_1_hero.png",
+        "/Users/renzodelgado/Documents/Dev/Personal/Apps/CoderGang/Android/DirectChat/tools/store-listing/screenshots/03_screenshot_es_2_templates.png",
+        "/Users/renzodelgado/Documents/Dev/Personal/Apps/CoderGang/Android/DirectChat/tools/store-listing/screenshots/03_screenshot_es_3_history.png",
+        "/Users/renzodelgado/Documents/Dev/Personal/Apps/CoderGang/Android/DirectChat/tools/store-listing/screenshots/03_screenshot_es_4_qr.png",
+        "/Users/renzodelgado/Documents/Dev/Personal/Apps/CoderGang/Android/DirectChat/tools/store-listing/screenshots/03_screenshot_es_5_pro.png"
+      ],
+      "replace": true
+    },
+    {
+      "language": "en-US",
+      "imageType": "phoneScreenshots",
+      "files": [
+        "/Users/renzodelgado/Documents/Dev/Personal/Apps/CoderGang/Android/DirectChat/tools/store-listing/screenshots/03_screenshot_en_1_hero.png",
+        "/Users/renzodelgado/Documents/Dev/Personal/Apps/CoderGang/Android/DirectChat/tools/store-listing/screenshots/03_screenshot_en_2_templates.png",
+        "/Users/renzodelgado/Documents/Dev/Personal/Apps/CoderGang/Android/DirectChat/tools/store-listing/screenshots/03_screenshot_en_3_history.png",
+        "/Users/renzodelgado/Documents/Dev/Personal/Apps/CoderGang/Android/DirectChat/tools/store-listing/screenshots/03_screenshot_en_4_qr.png",
+        "/Users/renzodelgado/Documents/Dev/Personal/Apps/CoderGang/Android/DirectChat/tools/store-listing/screenshots/03_screenshot_en_5_pro.png"
+      ],
+      "replace": true
+    },
+    {
+      "language": "pt-BR",
+      "imageType": "phoneScreenshots",
+      "files": [
+        "/Users/renzodelgado/Documents/Dev/Personal/Apps/CoderGang/Android/DirectChat/tools/store-listing/screenshots/03_screenshot_pt_1_hero.png",
+        "/Users/renzodelgado/Documents/Dev/Personal/Apps/CoderGang/Android/DirectChat/tools/store-listing/screenshots/03_screenshot_pt_2_templates.png",
+        "/Users/renzodelgado/Documents/Dev/Personal/Apps/CoderGang/Android/DirectChat/tools/store-listing/screenshots/03_screenshot_pt_3_history.png",
+        "/Users/renzodelgado/Documents/Dev/Personal/Apps/CoderGang/Android/DirectChat/tools/store-listing/screenshots/03_screenshot_pt_4_qr.png",
+        "/Users/renzodelgado/Documents/Dev/Personal/Apps/CoderGang/Android/DirectChat/tools/store-listing/screenshots/03_screenshot_pt_5_pro.png"
+      ],
+      "replace": true
+    }
+  ],
+  "changesNotSentForReviewRequested": false
+}

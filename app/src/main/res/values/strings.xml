@@ -1,5 +1,6 @@
 <resources>
     <string name="app_name">Mensaji</string>
+    <string name="text_legal_disclaimer">Independent app. Not affiliated with WhatsApp Inc. Uses the official wa.me scheme to open conversations.</string>
     <string name="text_home">Home</string>
     <string name="text_chat">Start Chat</string>
     <string name="text_history">History</string>

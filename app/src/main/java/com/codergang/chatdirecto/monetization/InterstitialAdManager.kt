@@ -38,15 +38,16 @@ class InterstitialAdManager(
         )
     }
 
-    fun onChatOpened(activity: Activity, adsEnabled: Boolean) {
-        if (!adsEnabled) return
+    /** @return true si se mostró un interstitial en esta apertura de chat. */
+    fun onChatOpened(activity: Activity, adsEnabled: Boolean): Boolean {
+        if (!adsEnabled) return false
         chatCount++
-        if (chatCount % showEveryN != 0) return
+        if (chatCount % showEveryN != 0) return false
 
         val ad = interstitialAd
         if (ad == null) {
             preload()
-            return
+            return false
         }
 
         ad.fullScreenContentCallback = object : FullScreenContentCallback() {
@@ -61,5 +62,6 @@ class InterstitialAdManager(
             }
         }
         ad.show(activity)
+        return true
     }
 }

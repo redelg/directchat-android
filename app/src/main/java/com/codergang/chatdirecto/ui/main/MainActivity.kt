@@ -15,6 +15,7 @@ import com.codergang.chatdirecto.monetization.ConsentManager
 import com.codergang.chatdirecto.monetization.InterstitialAdManager
 import com.codergang.chatdirecto.monetization.MonetizationUiConfig
 import com.codergang.chatdirecto.monetization.RevenueCatManager
+import com.codergang.chatdirecto.monetization.ReviewPrompter
 import com.codergang.chatdirecto.monetization.RewardedAdManager
 import com.revenuecat.purchases.Purchases
 import kotlinx.coroutines.launch
@@ -99,9 +100,14 @@ class MainActivity : AppCompatActivity() {
                         }
                     },
                     onInterstitialChatOpened = {
-                        if (MonetizationUiConfig.PURCHASES_ENABLED && ::interstitialAdManager.isInitialized) {
+                        val adShown = if (MonetizationUiConfig.PURCHASES_ENABLED && ::interstitialAdManager.isInitialized) {
                             val adsEnabled = MonetizationUiConfig.areAdsEnabled(proEntitlementState.value)
                             interstitialAdManager.onChatOpened(this, adsEnabled)
+                        } else {
+                            false
+                        }
+                        if (!adShown) {
+                            ReviewPrompter.onChatOpened(this)
                         }
                     },
                     onRewardedUnlock = {

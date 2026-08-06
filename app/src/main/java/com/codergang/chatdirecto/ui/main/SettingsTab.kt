@@ -1,8 +1,11 @@
 package com.codergang.chatdirecto.ui.main
 
 import androidx.compose.foundation.BorderStroke
+import androidx.compose.foundation.Image
+import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
@@ -13,20 +16,31 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.shape.CircleShape
+import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.outlined.Apps
+import androidx.compose.material.icons.outlined.AutoAwesome
+import androidx.compose.material.icons.outlined.Category
+import androidx.compose.material.icons.outlined.ChevronRight
+import androidx.compose.material.icons.outlined.Description
+import androidx.compose.material.icons.outlined.Share
+import androidx.compose.material.icons.outlined.Shield
+import androidx.compose.material.icons.outlined.Star
 import androidx.compose.material.icons.rounded.Check
 import androidx.compose.material3.Button
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.ElevatedCard
+import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
 import androidx.compose.material3.OutlinedButton
-import androidx.compose.material3.Text
-import androidx.compose.material3.TextButton
 import androidx.compose.material3.Surface
+import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color as ComposeColor
+import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
@@ -53,9 +67,12 @@ internal fun SettingsTab(
     LazyColumn(
         modifier = Modifier
             .fillMaxSize()
-            .padding(horizontal = 12.dp, vertical = 10.dp),
-        verticalArrangement = Arrangement.spacedBy(10.dp)
+            .background(BrandSurface)
+            .padding(horizontal = 16.dp),
+        verticalArrangement = Arrangement.spacedBy(8.dp)
     ) {
+        item { Spacer(modifier = Modifier.height(4.dp)) }
+
         if (showMonetization) {
             item {
                 MonetizationCard(
@@ -66,45 +83,177 @@ internal fun SettingsTab(
                     onOpenPaywall = onOpenPaywall
                 )
             }
+            item { Spacer(modifier = Modifier.height(8.dp)) }
         }
 
+        item { SectionHeader(text = stringResource(R.string.tex_support_us)) }
         item {
-            Text(
-                text = stringResource(R.string.tex_support_us),
-                fontFamily = AvenirFamily,
-                fontWeight = FontWeight.Bold
-            )
+            SettingsGroup {
+                SettingsRow(
+                    icon = Icons.Outlined.Category,
+                    text = stringResource(R.string.text_manage_categories),
+                    onClick = onManageCategories
+                )
+                SettingsDivider()
+                SettingsRow(
+                    icon = Icons.Outlined.Star,
+                    text = stringResource(R.string.text_leave_a_review),
+                    onClick = onRateApp
+                )
+                SettingsDivider()
+                SettingsRow(
+                    icon = Icons.Outlined.Share,
+                    text = stringResource(R.string.text_share_the_app),
+                    onClick = onShareApp
+                )
+                SettingsDivider()
+                SettingsRow(
+                    icon = Icons.Outlined.Apps,
+                    text = stringResource(R.string.text_other_apps),
+                    onClick = onOtherApps
+                )
+            }
         }
-        item { SettingsRow(text = stringResource(R.string.text_manage_categories), onClick = onManageCategories) }
-        item { SettingsRow(text = stringResource(R.string.text_leave_a_review), onClick = onRateApp) }
-        item { SettingsRow(text = stringResource(R.string.text_share_the_app), onClick = onShareApp) }
-        item { SettingsRow(text = stringResource(R.string.text_other_apps), onClick = onOtherApps) }
-        item { Spacer(modifier = Modifier.height(2.dp)) }
+
+        item { Spacer(modifier = Modifier.height(8.dp)) }
+        item { SectionHeader(text = stringResource(R.string.text_about)) }
+        item { BrandStrip() }
         item {
-            Text(
-                text = stringResource(R.string.text_about),
-                fontFamily = AvenirFamily,
-                fontWeight = FontWeight.Bold
-            )
+            SettingsGroup {
+                SettingsRow(
+                    icon = Icons.Outlined.Shield,
+                    text = stringResource(R.string.text_privacy_policy),
+                    onClick = onPrivacyPolicy
+                )
+                SettingsDivider()
+                SettingsRow(
+                    icon = Icons.Outlined.Description,
+                    text = stringResource(R.string.text_terms_and_conditions),
+                    onClick = onTerms
+                )
+            }
         }
-        item { SettingsRow(text = stringResource(R.string.text_privacy_policy), onClick = onPrivacyPolicy) }
-        item { SettingsRow(text = stringResource(R.string.text_terms_and_conditions), onClick = onTerms) }
         item {
             Text(
-                text = stringResource(R.string.text_brand_disclaimer),
+                text = stringResource(R.string.text_legal_disclaimer),
+                modifier = Modifier.padding(horizontal = 4.dp, vertical = 12.dp),
                 fontFamily = AvenirFamily,
-                fontSize = 13.sp,
-                color = ComposeColor(0xFF555555),
-                lineHeight = 18.sp
+                fontSize = 12.sp,
+                color = ComposeColor(0xFF6B7280),
+                lineHeight = 17.sp
             )
         }
         item {
             Text(
                 text = "${stringResource(R.string.text_version)} ${BuildConfig.VERSION_NAME}",
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(bottom = 16.dp),
                 fontFamily = AvenirFamily,
-                fontWeight = FontWeight.SemiBold
+                fontWeight = FontWeight.Medium,
+                fontSize = 12.sp,
+                color = ComposeColor(0xFF94A3B8)
             )
         }
+    }
+}
+
+@Composable
+private fun SectionHeader(text: String) {
+    Text(
+        text = text.uppercase(),
+        modifier = Modifier.padding(horizontal = 8.dp, vertical = 6.dp),
+        fontFamily = AvenirFamily,
+        fontWeight = FontWeight.Bold,
+        fontSize = 11.sp,
+        color = BrandPrimary,
+        letterSpacing = 1.2.sp
+    )
+}
+
+@Composable
+private fun SettingsGroup(content: @Composable () -> Unit) {
+    Surface(
+        modifier = Modifier.fillMaxWidth(),
+        color = ComposeColor.White,
+        shape = RoundedCornerShape(20.dp),
+        border = BorderStroke(1.dp, BrandBorder),
+        shadowElevation = 0.dp
+    ) {
+        Column { content() }
+    }
+}
+
+@Composable
+private fun SettingsRow(
+    icon: ImageVector,
+    text: String,
+    onClick: () -> Unit
+) {
+    Row(
+        modifier = Modifier
+            .fillMaxWidth()
+            .clickable { onClick() }
+            .padding(horizontal = 14.dp, vertical = 14.dp),
+        verticalAlignment = Alignment.CenterVertically
+    ) {
+        Box(
+            modifier = Modifier
+                .size(36.dp)
+                .background(BrandLavenderBg, shape = RoundedCornerShape(10.dp)),
+            contentAlignment = Alignment.Center
+        ) {
+            Icon(
+                imageVector = icon,
+                contentDescription = null,
+                tint = BrandPrimary,
+                modifier = Modifier.size(20.dp)
+            )
+        }
+        Spacer(modifier = Modifier.width(14.dp))
+        Text(
+            text = text,
+            modifier = Modifier.weight(1f),
+            fontFamily = AvenirFamily,
+            fontWeight = FontWeight.SemiBold,
+            fontSize = 15.sp,
+            color = BrandText
+        )
+        Icon(
+            imageVector = Icons.Outlined.ChevronRight,
+            contentDescription = null,
+            tint = ComposeColor(0xFFCBD5E1),
+            modifier = Modifier.size(22.dp)
+        )
+    }
+}
+
+@Composable
+private fun SettingsDivider() {
+    HorizontalDivider(
+        modifier = Modifier.padding(start = 64.dp),
+        thickness = 1.dp,
+        color = ComposeColor(0xFFF1F5F9)
+    )
+}
+
+@Composable
+private fun BrandStrip() {
+    Surface(
+        modifier = Modifier
+            .fillMaxWidth()
+            .padding(vertical = 4.dp),
+        color = BrandLavenderBg,
+        shape = RoundedCornerShape(20.dp)
+    ) {
+        Image(
+            painter = painterResource(R.drawable.wordmark_lockup),
+            contentDescription = stringResource(R.string.app_name),
+            modifier = Modifier
+                .fillMaxWidth()
+                .height(72.dp)
+                .padding(vertical = 16.dp)
+        )
     }
 }
 
@@ -116,39 +265,40 @@ private fun MonetizationCard(
     onRestorePurchases: () -> Unit,
     onOpenPaywall: () -> Unit
 ) {
-    ElevatedCard(
+    Surface(
         modifier = Modifier.fillMaxWidth(),
-        elevation = CardDefaults.elevatedCardElevation(defaultElevation = 3.dp),
-        colors = CardDefaults.elevatedCardColors(containerColor = ComposeColor(0xFFF8FCF9)),
-        shape = androidx.compose.foundation.shape.RoundedCornerShape(24.dp)
+        shape = RoundedCornerShape(24.dp),
+        color = BrandLavenderBg,
+        border = BorderStroke(1.dp, BrandPrimary.copy(alpha = 0.18f))
     ) {
-        Column(modifier = Modifier.padding(16.dp)) {
+        Column(modifier = Modifier.padding(20.dp)) {
             Row(
                 modifier = Modifier.fillMaxWidth(),
                 verticalAlignment = Alignment.Top
             ) {
-                Surface(
-                    modifier = Modifier.size(48.dp),
-                    shape = androidx.compose.foundation.shape.RoundedCornerShape(16.dp),
-                    color = PrimaryGreen.copy(alpha = 0.12f)
+                Box(
+                    modifier = Modifier
+                        .size(44.dp)
+                        .background(BrandPrimary, shape = RoundedCornerShape(14.dp)),
+                    contentAlignment = Alignment.Center
                 ) {
                     Icon(
-                        painter = painterResource(R.drawable.ic_shield_check),
+                        imageVector = Icons.Outlined.AutoAwesome,
                         contentDescription = null,
-                        tint = PrimaryGreenDark,
-                        modifier = Modifier.padding(12.dp)
+                        tint = ComposeColor.White,
+                        modifier = Modifier.size(22.dp)
                     )
                 }
-                Spacer(modifier = Modifier.width(12.dp))
+                Spacer(modifier = Modifier.width(14.dp))
                 Column(modifier = Modifier.weight(1f)) {
                     Text(
                         text = stringResource(R.string.text_one_time_unlock),
                         fontFamily = AvenirFamily,
                         fontWeight = FontWeight.Bold,
-                        fontSize = 20.sp,
-                        color = ComposeColor(0xFF18372B)
+                        fontSize = 19.sp,
+                        color = BrandText
                     )
-                    Spacer(modifier = Modifier.height(4.dp))
+                    Spacer(modifier = Modifier.height(2.dp))
                     Text(
                         text = when {
                             adsRemoved -> stringResource(R.string.text_ads_removed_active)
@@ -156,9 +306,9 @@ private fun MonetizationCard(
                             else -> stringResource(R.string.text_remove_ads_forever)
                         },
                         fontFamily = AvenirFamily,
-                        fontSize = 14.sp,
-                        lineHeight = 20.sp,
-                        color = ComposeColor(0xFF50635B)
+                        fontSize = 13.sp,
+                        lineHeight = 18.sp,
+                        color = ComposeColor(0xFF475569)
                     )
                 }
                 StatusBadge(
@@ -170,55 +320,60 @@ private fun MonetizationCard(
                 )
             }
 
-            Spacer(modifier = Modifier.height(14.dp))
+            Spacer(modifier = Modifier.height(16.dp))
             MonetizationBenefitRow(text = stringResource(R.string.text_pro_benefit_no_ads))
             MonetizationBenefitRow(text = stringResource(R.string.text_pro_benefit_power_tools))
             MonetizationBenefitRow(text = stringResource(R.string.text_pro_benefit_lifetime))
 
             if (!revenueCatReady) {
-                Spacer(modifier = Modifier.height(12.dp))
+                Spacer(modifier = Modifier.height(14.dp))
                 Surface(
-                    color = ComposeColor(0xFFFFF1F1),
-                    shape = androidx.compose.foundation.shape.RoundedCornerShape(16.dp)
+                    color = BrandAccent.copy(alpha = 0.12f),
+                    shape = RoundedCornerShape(14.dp)
                 ) {
                     Text(
                         text = stringResource(R.string.text_purchases_unavailable),
                         modifier = Modifier.padding(horizontal = 12.dp, vertical = 10.dp),
                         fontFamily = AvenirFamily,
                         fontSize = 13.sp,
-                        color = ComposeColor(0xFFB00020)
+                        color = BrandAccent
                     )
                 }
             }
 
-            Spacer(modifier = Modifier.height(14.dp))
+            Spacer(modifier = Modifier.height(16.dp))
             if (!adsRemoved && revenueCatReady) {
                 Button(
                     onClick = onOpenPaywall,
                     modifier = Modifier
                         .fillMaxWidth()
-                        .height(54.dp),
-                    shape = androidx.compose.foundation.shape.RoundedCornerShape(16.dp)
+                        .height(52.dp),
+                    shape = RoundedCornerShape(14.dp),
+                    colors = androidx.compose.material3.ButtonDefaults.buttonColors(
+                        containerColor = BrandPrimary,
+                        contentColor = ComposeColor.White
+                    )
                 ) {
                     Text(
                         text = stringResource(R.string.text_buy_lifetime),
                         fontFamily = AvenirFamily,
-                        fontWeight = FontWeight.Bold
+                        fontWeight = FontWeight.Bold,
+                        fontSize = 15.sp
                     )
                 }
-                Spacer(modifier = Modifier.height(10.dp))
+                Spacer(modifier = Modifier.height(8.dp))
                 OutlinedButton(
                     onClick = onRestorePurchases,
                     modifier = Modifier
                         .fillMaxWidth()
-                        .height(52.dp),
-                    shape = androidx.compose.foundation.shape.RoundedCornerShape(16.dp),
-                    border = BorderStroke(1.dp, PrimaryGreen.copy(alpha = 0.35f))
+                        .height(48.dp),
+                    shape = RoundedCornerShape(14.dp),
+                    border = BorderStroke(1.dp, BrandPrimary.copy(alpha = 0.35f))
                 ) {
                     Text(
                         text = stringResource(R.string.text_restore_purchase),
                         fontFamily = AvenirFamily,
-                        color = PrimaryGreenDark
+                        color = BrandPrimary
                     )
                 }
             }
@@ -231,19 +386,20 @@ private fun MonetizationBenefitRow(text: String) {
     Row(
         modifier = Modifier
             .fillMaxWidth()
-            .padding(vertical = 5.dp),
+            .padding(vertical = 4.dp),
         verticalAlignment = Alignment.CenterVertically
     ) {
-        Surface(
-            modifier = Modifier.size(26.dp),
-            shape = androidx.compose.foundation.shape.RoundedCornerShape(999.dp),
-            color = PrimaryGreen.copy(alpha = 0.14f)
+        Box(
+            modifier = Modifier
+                .size(22.dp)
+                .background(BrandPrimary.copy(alpha = 0.14f), shape = CircleShape),
+            contentAlignment = Alignment.Center
         ) {
             Icon(
                 imageVector = Icons.Rounded.Check,
                 contentDescription = null,
-                tint = PrimaryGreenDark,
-                modifier = Modifier.padding(5.dp)
+                tint = BrandPrimary,
+                modifier = Modifier.size(14.dp)
             )
         }
         Spacer(modifier = Modifier.width(10.dp))
@@ -252,7 +408,7 @@ private fun MonetizationBenefitRow(text: String) {
             fontFamily = AvenirFamily,
             fontSize = 14.sp,
             lineHeight = 19.sp,
-            color = ComposeColor(0xFF31443C)
+            color = BrandText
         )
     }
 }
@@ -260,38 +416,16 @@ private fun MonetizationBenefitRow(text: String) {
 @Composable
 private fun StatusBadge(text: String) {
     Surface(
-        color = PrimaryGreen.copy(alpha = 0.12f),
-        shape = androidx.compose.foundation.shape.RoundedCornerShape(999.dp)
+        color = BrandPrimary.copy(alpha = 0.14f),
+        shape = RoundedCornerShape(999.dp)
     ) {
         Text(
             text = text,
-            modifier = Modifier.padding(horizontal = 10.dp, vertical = 6.dp),
+            modifier = Modifier.padding(horizontal = 10.dp, vertical = 5.dp),
             fontFamily = AvenirFamily,
             fontWeight = FontWeight.Bold,
-            fontSize = 12.sp,
-            color = PrimaryGreenDark
-        )
-    }
-}
-
-@Composable
-private fun SettingsRow(
-    text: String,
-    onClick: () -> Unit
-) {
-    ElevatedCard(
-        modifier = Modifier
-            .fillMaxWidth()
-            .clickable { onClick() },
-        elevation = CardDefaults.elevatedCardElevation(defaultElevation = 2.dp),
-        colors = CardDefaults.elevatedCardColors(containerColor = ComposeColor.White),
-        shape = androidx.compose.foundation.shape.RoundedCornerShape(16.dp)
-    ) {
-        Text(
-            text = text,
-            modifier = Modifier.padding(horizontal = 16.dp, vertical = 14.dp),
-            fontFamily = AvenirFamily,
-            fontWeight = FontWeight.SemiBold
+            fontSize = 11.sp,
+            color = BrandPrimary
         )
     }
 }

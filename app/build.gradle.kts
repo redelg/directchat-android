@@ -146,6 +146,9 @@ dependencies {
 
     // Google Ads
     implementation("com.google.android.gms:play-services-ads:25.0.0")
+
+    // Play In-App Review
+    implementation("com.google.android.play:review-ktx:2.0.2")
     implementation("com.revenuecat.purchases:purchases:9.23.1")
     implementation("com.revenuecat.purchases:purchases-ui:9.23.1")
 
